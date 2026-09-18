@@ -3,108 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>غراوي للسياحة والسفر</title>
+<title>غراوي للسياحة والسفر | Ghrawi Travel</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fa;color:#10233f}
-header{background:#0b192c;color:white;padding:22px 16px;text-align:center}
-.logo{font-size:28px;font-weight:bold;color:#fff}.logo b{color:#d4af37}
-header p{margin:7px 0 0;color:#d9e0e8}
-.hero{padding:45px 18px;text-align:center;background:linear-gradient(135deg,#0b192c,#1e3e62);color:white}
-.hero h1{font-size:32px;margin:0 0 12px}.hero p{font-size:17px;line-height:1.8}
-.card{max-width:850px;margin:-20px auto 30px;background:white;border-radius:20px;padding:20px;box-shadow:0 10px 35px #0002}
-.tabs{display:flex;gap:8px;margin-bottom:20px}.tabs button{flex:1;border:0;padding:14px;border-radius:12px;background:#edf1f5;color:#10233f;font-weight:bold;cursor:pointer}.tabs .active{background:#0b192c;color:white}
-form{display:grid;gap:12px}label{font-weight:bold;font-size:14px}input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;font-size:15px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.submit{border:0;padding:15px;border-radius:12px;background:#b99635;color:white;font-size:17px;font-weight:bold;cursor:pointer}
-.whatsapp{display:block;text-align:center;margin-top:12px;padding:13px;border-radius:12px;background:#25d366;color:white;text-decoration:none;font-weight:bold}
-section{max-width:850px;margin:30px auto;padding:0 18px;text-align:center}section h2{color:#0b192c}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.service{background:white;padding:22px 10px;border-radius:15px;box-shadow:0 4px 18px #0001}.service strong{display:block;margin-top:8px}
-footer{margin-top:40px;background:#0b192c;color:white;text-align:center;padding:25px 15px}
-@media(max-width:600px){.row,.services{grid-template-columns:1fr}.hero h1{font-size:26px}.card{margin:0 12px 25px}.tabs button{font-size:13px;padding:12px}}
+header{background:#081a30;color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:22px;font-weight:bold}.brand span{color:#d4af37}.lang{border:1px solid #ffffff55;background:none;color:#fff;padding:8px 14px;border-radius:20px}
+.hero{background:linear-gradient(120deg,#081a30,#173f66);color:white;text-align:center;padding:55px 18px 90px}
+.hero h1{font-size:34px;margin:10px 0}.hero p{font-size:17px;line-height:1.8;color:#e5ebf2}
+.booking{max-width:950px;margin:-45px auto 35px;background:white;border-radius:22px;padding:22px;box-shadow:0 15px 45px #0002}
+.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-bottom:22px}
+.tabs button{border:0;background:#eef2f6;padding:13px 5px;border-radius:11px;font-weight:bold;color:#10233f}
+.tabs .on{background:#0b2039;color:#fff}
+form{display:grid;gap:13px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+label{font-size:13px;font-weight:bold;display:block;margin-bottom:5px}
+input,select{width:100%;padding:14px;border:1px solid #d9dee5;border-radius:10px;font-size:15px;background:#fff}
+.btn{border:0;background:#b79535;color:white;padding:15px;border-radius:11px;font-size:16px;font-weight:bold}
+.note{text-align:center;color:#718096;font-size:12px;margin-top:8px}
+.services{max-width:950px;margin:30px auto;padding:0 18px}
+.services h2{text-align:center}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:white;padding:25px 15px;text-align:center;border-radius:17px;box-shadow:0 5px 20px #0001}.icon{font-size:30px}.card h3{margin:10px 0 5px}
+.vip{margin:35px auto;max-width:950px;background:#0b2039;color:#fff;border-radius:20px;padding:30px;text-align:center}
+.vip h2{color:#d4af37}.wa{display:inline-block;background:#25d366;color:#fff;text-decoration:none;padding:13px 25px;border-radius:10px;font-weight:bold}
+footer{background:#081a30;color:#fff;text-align:center;padding:28px 15px;margin-top:40px}
+@media(max-width:700px){header{padding:14px 18px}.hero h1{font-size:27px}.tabs{grid-template-columns:repeat(3,1fr)}.grid,.cards{grid-template-columns:1fr}.booking{margin:-35px 12px 30px}.hero{padding-bottom:65px}}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">GHRAWI <b>Travel</b></div>
-<p>غراوي للسياحة والسفر</p>
+<div class="brand">GHRAWI <span>Travel</span></div>
+<button class="lang" onclick="alert('English version coming soon')">EN</button>
 </header>
 
-<div class="hero">
-<h1>سفرك يبدأ من هنا ✈️</h1>
-<p>نساعدك في اختيار الرحلات والفنادق والخدمات السياحية المناسبة لاحتياجاتك.</p>
-</div>
+<section class="hero">
+<h1>سفرك يبدأ من غراوي</h1>
+<p>حلول سفر متكاملة للأفراد ورجال الأعمال والخدمات VIP<br>نساعدك على اختيار الرحلة والخدمة الأنسب لاحتياجاتك.</p>
+</section>
 
-<div class="card">
+<div class="booking">
 
 <div class="tabs">
-<button class="active" onclick="show('flight',this)">✈️ طيران</button>
-<button onclick="show('hotel',this)">🏨 فنادق</button>
-<button onclick="show('car',this)">🚘 سيارات</button>
+<button class="on" onclick="tab('flight',this)">✈️ طيران</button>
+<button onclick="tab('hotel',this)">🏨 فنادق</button>
+<button onclick="tab('car',this)">🚘 سيارات</button>
+<button onclick="tab('visa',this)">🛂 تأشيرات</button>
+<button onclick="tab('tour',this)">🌍 رحلات</button>
+<button onclick="tab('vip',this)">💎 VIP</button>
 </div>
 
 <form id="flight">
-<div class="row">
+<div class="grid">
 <div><label>من</label><input id="from" placeholder="دمشق"></div>
-<div><label>إلى</label><input id="to" placeholder="دبي"></div>
+<div><label>إلى</label><input id="to" placeholder="الوجهة"></div>
+<div><label>تاريخ السفر</label><input id="fd" type="date"></div>
+<div><label>العودة</label><input id="rd" type="date"></div>
+<div><label>المسافرون</label><input id="p" type="number" value="1" min="1"></div>
+<div><label>درجة السفر</label><select id="cl"><option>اقتصادية</option><option>رجال أعمال</option><option>درجة أولى</option></select></div>
 </div>
-<div class="row">
-<div><label>تاريخ السفر</label><input id="date" type="date"></div>
-<div><label>عدد المسافرين</label><input id="people" type="number" value="1" min="1"></div>
-</div>
-<button class="submit" type="button" onclick="book('flight')">طلب حجز الرحلة</button>
+<button class="btn" type="button" onclick="send('✈️ طلب حجز طيران')">البحث عن أفضل الخيارات</button>
 </form>
 
 <form id="hotel" style="display:none">
-<label>المدينة</label><input id="city" placeholder="دبي">
-<div class="row">
-<div><label>تسجيل الدخول</label><input id="checkin" type="date"></div>
-<div><label>تسجيل الخروج</label><input id="checkout" type="date"></div>
+<div class="grid">
+<div><label>المدينة</label><input id="hc" placeholder="دبي"></div>
+<div><label>عدد الغرف</label><input id="rooms" type="number" value="1"></div>
+<div><label>تاريخ الدخول</label><input id="hi" type="date"></div>
+<div><label>تاريخ الخروج</label><input id="ho" type="date"></div>
 </div>
-<label>نوع الغرفة</label><select id="room"><option>غرفة مفردة</option><option>غرفة مزدوجة</option><option>جناح</option></select>
-<button class="submit" type="button" onclick="book('hotel')">طلب حجز الفندق</button>
+<button class="btn" type="button" onclick="send('🏨 طلب حجز فندق')">ابحث عن الفندق المناسب</button>
 </form>
 
 <form id="car" style="display:none">
-<label>المدينة</label><input id="carcity" placeholder="دمشق">
-<div class="row">
-<div><label>التاريخ</label><input id="cardate" type="date"></div>
-<div><label>نوع السيارة</label><select id="cartype"><option>اقتصادية</option><option>VIP</option><option>عائلية</option></select></div>
+<div class="grid">
+<div><label>المدينة</label><input id="cc" placeholder="دبي"></div>
+<div><label>التاريخ</label><input id="cd" type="date"></div>
+<div><label>نوع السيارة</label><select id="ct"><option>اقتصادية</option><option>عائلية</option><option>VIP</option></select></div>
+<div><label>الخدمة</label><select id="cs"><option>استئجار سيارة</option><option>سيارة مع سائق</option></option></select></div>
 </div>
-<button class="submit" type="button" onclick="book('car')">طلب سيارة</button>
+<button class="btn" type="button" onclick="send('🚘 طلب سيارة')">طلب الخدمة</button>
 </form>
 
-<a class="whatsapp" href="https://wa.me/963933535323" target="_blank" rel="noopener">💬 تواصل معنا عبر واتساب</a>
+<form id="visa" style="display:none">
+<label>الوجهة</label><input id="vc" placeholder="الدولة المطلوبة">
+<label>الجنسية</label><input id="vn" placeholder="الجنسية">
+<button class="btn" type="button" onclick="send('🛂 استفسار تأشيرة')">طلب استشارة</button>
+</form>
+
+<form id="tour" style="display:none">
+<label>الوجهة أو الرحلة</label><input id="tc" placeholder="مثلاً: تركيا، دبي، أوروبا">
+<label>عدد الأشخاص</label><input id="tp" type="number" value="1">
+<button class="btn" type="button" onclick="send('🌍 طلب رحلة سياحية')">صمم لي رحلتي</button>
+</form>
+
+<form id="vip" style="display:none">
+<label>نوع الخدمة</label><select id="vs"><option>استقبال VIP</option><option>نقل رجال أعمال</option><option>تنسيق رحلة أعمال</option><option>خدمات رجال الأعمال والمعارض</option></select>
+<label>الوجهة</label><input id="vd" placeholder="المدينة / الدولة">
+<button class="btn" type="button" onclick="send('💎 طلب خدمة VIP / Business')">تواصل مع غراوي</button>
+</form>
+
+<div class="note">الطلب يتم مراجعته من فريق غراوي واختيار الخيارات المناسبة قبل تأكيد الحجز.</div>
 </div>
 
-<section>
+<section class="services">
 <h2>خدمات غراوي</h2>
-<div class="services">
-<div class="service">✈️<strong>حجوزات الطيران</strong></div>
-<div class="service">🏨<strong>حجوزات الفنادق</strong></div>
-<div class="service">🚘<strong>خدمات النقل</strong></div>
+<div class="cards">
+<div class="card"><div class="icon">✈️</div><h3>Travel</h3><p>رحلات وحجوزات طيران</p></div>
+<div class="card"><div class="icon">💼</div><h3>Business</h3><p>حلول سفر لرجال الأعمال</p></div>
+<div class="card"><div class="icon">💎</div><h3>VIP</h3><p>خدمات سفر واستقبال مميزة</p></div>
+<div class="card"><div class="icon">🏨</div><h3>Hotels</h3><p>اختيار وحجز الفنادق</p></div>
+<div class="card"><div class="icon">🛂</div><h3>Visa</h3><p>استشارات وخدمات التأشيرات</p></div>
+<div class="card"><div class="icon">🌍</div><h3>Tours</h3><p>برامج ورحلات سياحية</p></div>
 </div>
+</section>
+
+<section class="vip">
+<h2>غراوي Business & VIP</h2>
+<p>تنسيق متكامل لرحلات رجال الأعمال والمعارض والوفود والخدمات الخاصة.</p>
+<a class="wa" href="https://wa.me/963933535323" target="_blank" rel="noopener">💬 تواصل مباشرة عبر واتساب</a>
 </section>
 
 <footer>
 <strong>غراوي للسياحة والسفر</strong>
-<p>Ghrawi Travel & Tourism</p>
+<p>GHRAWI Travel & Tourism</p>
+<p>Damascus · Syria</p>
 </footer>
 
 <script>
-function show(id,btn){
+function tab(id,b){
 document.querySelectorAll('form').forEach(x=>x.style.display='none');
 document.getElementById(id).style.display='grid';
-document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
-btn.classList.add('active');
+document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));
+b.classList.add('on')
 }
-function book(type){
-let msg='';
-if(type==='flight')msg='مرحباً غراوي للسياحة والسفر، أريد طلب حجز طيران من '+from.value+' إلى '+to.value+' بتاريخ '+date.value+' لعدد '+people.value+' مسافر.';
-if(type==='hotel')msg='مرحباً غراوي، أريد حجز فندق في '+city.value+' من '+checkin.value+' إلى '+checkout.value+'، نوع الغرفة: '+room.value+'.';
-if(type==='car')msg='مرحباً غراوي، أريد سيارة في '+carcity.value+' بتاريخ '+cardate.value+'، النوع: '+cartype.value+'.';
-window.open('https://wa.me/963933535323?text='+encodeURIComponent(msg),'_blank');
+function send(title){
+let text=title+'\nمرحباً غراوي للسياحة والسفر، أريد الاستفسار عن الخدمة.';
+window.open('https://wa.me/963933535323?text='+encodeURIComponent(text),'_blank')
 }
 </script>
 
