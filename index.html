@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -46,12 +47,12 @@
             padding: 0 15px;
         }
 
-        /* تبويبات على طريقة Booking */
+        /* تبويبات نمط Booking */
         .booking-tabs {
             display: flex;
             gap: 10px;
             margin-bottom: 0;
-            background: rgba(10, 25, 47, 0.9);
+            background: rgba(10, 25, 47, 0.95);
             padding: 10px 10px 0 10px;
             border-radius: 12px 12px 0 0;
             overflow-x: auto;
@@ -121,10 +122,19 @@
             flex: 1;
         }
 
-        .radio-group {
+        .radio-group, .checkbox-group {
             display: flex;
             gap: 20px;
             margin-top: 5px;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         @media (max-width: 650px) {
@@ -197,40 +207,94 @@
         <div class="booking-box">
             <!-- تبويب الطيران -->
             <div id="flights" class="tab-content active">
-                <form onsubmit="event.preventDefault(); alert('تم استلام طلب حجز الطيران بنجاح!');">
+                <form onsubmit="event.preventDefault(); alert('تم استلام طلب حجز الطيران بنجاح! سنتواصل معك فوراً لتأكيد التفاصيل.');">
+                    
                     <div class="form-row">
                         <div class="form-group">
                             <label>الاسم الكامل</label>
-                            <input type="text" placeholder="الاسم كما في الجواز" required>
+                            <input type="text" placeholder="أدخل اسمك الكامل كما في الجواز" required>
                         </div>
                         <div class="form-group">
                             <label>رقم الهاتف / الواتساب</label>
                             <input type="tel" placeholder="09xxxxxxxx" required>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label>نوع الرحلة</label>
                         <div class="radio-group">
-                            <label><input type="radio" name="ftype" checked> ذهاب فقط</label>
-                            <label><input type="radio" name="ftype"> ذهاب وعودة</label>
+                            <label><input type="radio" name="ftype" value="oneway" checked> ذهاب فقط</label>
+                            <label><input type="radio" name="ftype" value="round"> ذهاب وعودة</label>
                         </div>
                     </div>
+
                     <div class="form-row">
-                        <div class="form-group"><label>من</label><input type="text" placeholder="مدينة المغادرة" required></div>
-                        <div class="form-group"><label>إلى</label><input type="text" placeholder="مدينة الوصول" required></div>
+                        <div class="form-group"><label>مدينة المغادرة (من)</label><input type="text" placeholder="مثال: دمشق" required></div>
+                        <div class="form-group"><label>مدينة الوصول (إلى)</label><input type="text" placeholder="مثال: دبي" required></div>
                     </div>
+
                     <div class="form-row">
                         <div class="form-group"><label>تاريخ الذهاب</label><input type="date" required></div>
-                        <div class="form-group"><label>تاريخ العودة</label><input type="date"></div>
+                        <div class="form-group"><label>تاريخ العودة (إن وجد)</label><input type="date"></div>
                     </div>
+
+                    <div class="form-group">
+                        <label>مرونة التواريخ</label>
+                        <select>
+                            <option value="exact">التاريخ محدد بالضبط</option>
+                            <option value="flex">مرن (± 3 أيام للحصول على أرخص سعر)</option>
+                        </select>
+                    </div>
+
+                    <!-- تفاصيل المسافرين -->
                     <div class="form-row">
-                        <div class="form-group"><label>عدد المسافرين</label><input type="number" min="1" value="1"></div>
                         <div class="form-group">
-                            <label>درجة السفر</label>
-                            <select><option>سياحية</option><option>رجال أعمال</option><option>درجة أولى</option></select>
+                            <label>بالغين (+12 سنة)</label>
+                            <input type="number" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label>أطفال (2 - 11 سنة)</label>
+                            <input type="number" min="0" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label>رضع (أقل من سنتين)</label>
+                            <input type="number" min="0" value="0">
                         </div>
                     </div>
-                    <button type="submit" class="btn">بحث وطلب حجز طيران</button>
+
+                    <!-- درجة السفر والشركة المفضلة -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>درجة السفر</label>
+                            <select required>
+                                <option value="economy">الدرجة السياحية (Economy)</option>
+                                <option value="business">درجة رجال الأعمال (Business Class)</option>
+                                <option value="first">الدرجة الأولى (First Class)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الشركة / الخطوط الجوية المفضلة</label>
+                            <input type="text" placeholder="مثال: أجنحة الشام، السورية، فلاي دبي...">
+                        </div>
+                    </div>
+
+                    <!-- خدمات إضافية -->
+                    <div class="form-group">
+                        <label>خدمات إضافية تحتاجها</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="services" value="hotel"> حجز فندقي</label>
+                            <label><input type="checkbox" name="services" value="visa"> تأشيرة دخول (فيزا)</label>
+                            <label><input type="checkbox" name="services" value="transfer"> توصيل من/إلى المطار</label>
+                        </div>
+                    </div>
+
+                    <!-- ملاحظات خاصة -->
+                    <div class="form-group">
+                        <label>ملاحظات أو طلبات خاصة</label>
+                        <textarea rows="3" placeholder="أدخل أي تفاصيل إضافية مثل: وزن أمتعة زائد، اختيار مقعد معين..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">إرسال طلب حجز الطيران</button>
                 </form>
             </div>
 
@@ -250,7 +314,7 @@
                         <div class="form-group"><label>عدد الغرف</label><input type="number" min="1" value="1"></div>
                         <div class="form-group"><label>عدد النزلاء</label><input type="number" min="1" value="2"></div>
                     </div>
-                    <button type="submit" class="btn">بحث وطلب حجز فندقي</button>
+                    <button type="submit" class="btn">طلب حجز فندقي</button>
                 </form>
             </div>
 
