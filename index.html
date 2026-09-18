@@ -1,374 +1,1358 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>غراوي للسياحة والسفر | Ghrawi Travel & Tourism</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-navy: #0B192C;
-            --secondary-navy: #1E3E62;
-            --accent-gold: #D4AF37;
-            --light-gold: #F4E0A5;
-            --white: #FFFFFF;
-            --gray-bg: #F4F6F9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071A2F">
+<meta name="description" content="غراوي للسياحة والسفر — حجوزات الطيران والفنادق والسيارات وتأمين السفر وخدمات VIP.">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<title>غراوي للسياحة والسفر | GHRAWI Travel & Tourism</title>
 
-        body {
-            background-color: var(--gray-bg);
-            color: #333;
-            line-height: 1.6;
-            padding-bottom: 80px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
-            color: var(--white);
-            padding: 20px 15px;
-            text-align: center;
-            border-bottom: 3px solid var(--accent-gold);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        .logo-area h1 {
-            font-size: 22px;
-            color: var(--accent-gold);
-            margin-bottom: 4px;
-        }
+<style>
 
-        .logo-area small {
-            font-size: 12px;
-            color: var(--light-gold);
-            letter-spacing: 0.5px;
-        }
+:root{
+    --navy:#071A2F;
+    --navy2:#0D3151;
+    --blue:#1767A8;
+    --red:#C62828;
+    --gold:#C8A451;
+    --gold2:#E5CA7A;
+    --white:#FFFFFF;
+    --bg:#F5F7FA;
+    --text:#172536;
+    --muted:#728196;
+    --line:#E4E9EF;
+    --green:#25D366;
+}
 
-        /* Main Container */
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            overflow: hidden;
-            border: 1px solid #E2E8F0;
-            width: 92%;
-        }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        /* Navigation Tabs */
-        .tabs {
-            display: flex;
-            background-color: var(--primary-navy);
-            border-bottom: 2px solid var(--accent-gold);
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .tab-btn {
-            flex: 1;
-            padding: 14px 8px;
-            text-align: center;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-        }
+body{
+    font-family:'Cairo',Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
 
-        .tab-btn i {
-            font-size: 16px;
-        }
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
 
-        .tab-btn:hover, .tab-btn.active {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-        }
+button{
+    cursor:pointer;
+}
 
-        /* Form Wrapper */
-        .tab-content {
-            display: none;
-            padding: 22px 18px;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .tab-content.active {
-            display: block;
-        }
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+/* ================= TOP BAR ================= */
 
-        @media (min-width: 480px) {
-            .form-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+.topbar{
+    background:var(--navy);
+    color:#dfe8ef;
+    font-size:11px;
+}
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+.topbar-inner{
+    max-width:1280px;
+    margin:auto;
+    padding:7px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .form-group label {
-            font-weight: 700;
-            color: var(--primary-navy);
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+.topbar span{
+    margin-left:18px;
+}
 
-        .form-group label i {
-            color: var(--accent-gold);
-        }
+.topbar i{
+    color:var(--gold2);
+    margin-left:5px;
+}
 
-        .form-group input, .form-group select {
-            padding: 12px 14px;
-            border: 1.5px solid #CBD5E1;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-            width: 100%;
-            background-color: #FAFAFA;
-            transition: all 0.3s ease;
-        }
 
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--accent-gold);
-            background-color: var(--white);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-        }
+/* ================= HEADER ================= */
 
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, var(--accent-gold), #B8860B);
-            color: var(--primary-navy);
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 8px 30px rgba(7,26,47,.07);
+}
 
-        .submit-btn:hover {
-            opacity: 0.95;
-            transform: translateY(-2px);
-        }
+.nav{
+    max-width:1280px;
+    margin:auto;
+    min-height:88px;
+    padding:8px 22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
 
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: white;
-            width: 58px;
-            height: 58px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 4px 15px rgba(0,0,0,0.25);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+/* ================= BRAND ================= */
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            color: #64748B;
-            font-size: 13px;
-        }
-    </style>
-</head>
-<body>
+.brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    min-width:290px;
+}
 
-    <!-- Header -->
-    <header>
-        <div class="logo-area">
-            <i class="fa-solid fa-earth-americas fa-2x" style="color: var(--accent-gold); margin-bottom: 6px;"></i>
-            <h1>غراوي للسياحة والسفر</h1>
-            <small>Ghrawi Travel & Tourism | Global Services</small>
-        </div>
-    </header>
+.logo-box{
+    width:82px;
+    height:70px;
+    border-radius:13px;
+    background:#fff;
+    border:1px solid #edf0f3;
+    box-shadow:0 6px 22px rgba(7,26,47,.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Tabs -->
-        <div class="tabs">
-            <button class="tab-btn active" onclick="openTab(event, 'flights')">
-                <i class="fa-solid fa-plane"></i> حجوزات طيران
-            </button>
-            <button class="tab-btn" onclick="openTab(event, 'hotels')">
-                <i class="fa-solid fa-hotel"></i> حجوزات فنادق
-            </button>
-            <button class="tab-btn" onclick="openTab(event, 'cars')">
-                <i class="fa-solid fa-car"></i> تأجير سيارات
-            </button>
-        </div>
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
 
-        <!-- Flights Tab -->
-        <div id="flights" class="tab-content active">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label><i class="fa-solid fa-plane-departure"></i> مدينة المغادرة</label>
-                    <input type="text" id="flight-from" placeholder="مثال: دبي / إسطنبول / دمشق">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-plane-arrival"></i> وجهة الوصول</label>
-                    <input type="text" id="flight-to" placeholder="مثال: لندن / باريس / برلين">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-calendar-days"></i> تاريخ السفر</label>
-                    <input type="date" id="flight-date">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-users"></i> عدد المسافرين</label>
-                    <select id="flight-passengers">
-                        <option>1 بالغ</option>
-                        <option>2 بالغين</option>
-                        <option>عائلة (بالغين وأطفال)</option>
-                    </select>
-                </div>
-            </div>
-            <button class="submit-btn" onclick="bookFlight()"><i class="fa-brands fa-whatsapp"></i> استفسر واحجز الطيران الآن</button>
-        </div>
+.brand-copy{
+    display:flex;
+    flex-direction:column;
+}
 
-        <!-- Hotels Tab -->
-        <div id="hotels" class="tab-content">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label><i class="fa-solid fa-city"></i> المدينة أو الفندق</label>
-                    <input type="text" id="hotel-city" placeholder="مثال: إسطنبول / دبي / القاهرة">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-calendar-check"></i> تاريخ الوصول</label>
-                    <input type="date" id="hotel-checkin">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-calendar-xmark"></i> تاريخ المغادرة</label>
-                    <input type="date" id="hotel-checkout">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-bed"></i> نوع الإقامة</label>
-                    <select id="hotel-rooms">
-                        <option>غرفة مفردة / مزدوجة</option>
-                        <option>جناح عائلي</option>
-                        <option>منتجع فاخر</option>
-                    </select>
-                </div>
-            </div>
-            <button class="submit-btn" onclick="bookHotel()"><i class="fa-brands fa-whatsapp"></i> استفسر واحجز الفندق</button>
-        </div>
+.brand-ar{
+    font-size:20px;
+    font-weight:800;
+    color:var(--navy);
+    line-height:1.2;
+}
 
-        <!-- Cars Tab -->
-        <div id="cars" class="tab-content">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label><i class="fa-solid fa-location-dot"></i> مدينة الاستلام</label>
-                    <input type="text" id="car-city" placeholder="ادخل اسم المدينة أو المطار">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-calendar-day"></i> تاريخ الاستلام</label>
-                    <input type="date" id="car-date">
-                </div>
-                <div class="form-group" style="grid-column: span 2;">
-                    <label><i class="fa-solid fa-car-side"></i> فئة السيارة</label>
-                    <select id="car-type">
-                        <option>اقتصادية</option>
-                        <option>عائلية / SUV</option>
-                        <option>فاخرة / VIP</option>
-                    </select>
-                </div>
-            </div>
-            <button class="submit-btn" onclick="bookCar()"><i class="fa-brands fa-whatsapp"></i> احجز السيارة الآن</button>
-        </div>
-    </div>
+.brand-en{
+    font-family:Georgia,serif;
+    font-size:9px;
+    letter-spacing:1.5px;
+    color:var(--red);
+    font-weight:700;
+    margin-top:3px;
+}
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/963933535323" class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+.brand-tag{
+    font-size:8px;
+    color:#7b8795;
+    margin-top:3px;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>غراوي للسياحة والسفر | بوابتك للترحال الدولي</p>
-    </footer>
+.brand-rule{
+    width:36px;
+    height:2px;
+    background:linear-gradient(90deg,var(--red),var(--gold));
+    margin-top:4px;
+}
 
-    <!-- Script -->
-    <script>
-        function openTab(evt, tabName) {
-            const contents = document.querySelectorAll('.tab-content');
-            const buttons = document.querySelectorAll('.tab-btn');
-            
-            contents.forEach(content => content.classList.remove('active'));
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            document.getElementById(tabName).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
 
-        const whatsappNumber = "963933535323";
+/* ================= NAVIGATION ================= */
 
-        function bookFlight() {
-            const from = document.getElementById('flight-from').value || "غير محدد";
-            const to = document.getElementById('flight-to').value || "غير محدد";
-            const date = document.getElementById('flight-date').value || "غير محدد";
-            const passengers = document.getElementById('flight-passengers').value;
+.navlinks{
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
 
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بحجز طيران دولي:\n- المغادرة: ${from}\n- الوجهة: ${to}\n- التاريخ: ${date}\n- المسافرين: ${passengers}`;
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
+.navlinks a{
+    font-size:12px;
+    font-weight:700;
+    color:#34465A;
+    padding:11px 12px;
+    border-radius:9px;
+}
 
-        function bookHotel() {
-            const city = document.getElementById('hotel-city').value || "غير محدد";
-            const checkin = document.getElementById('hotel-checkin').value || "غير محدد";
-            const checkout = document.getElementById('hotel-checkout').value || "غير محدد";
-            const rooms = document.getElementById('hotel-rooms').value;
+.navlinks a:hover,
+.navlinks a.active{
+    color:var(--red);
+    background:#faf7f3;
+}
 
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بحجز فندق:\n- الوجهة: ${city}\n- الوصول: ${checkin}\n- المغادرة: ${checkout}\n- تفاصيل الإقامة: ${rooms}`;
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
+.actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
-        function bookCar() {
-            const city = document.getElementById('car-city').value || "غير محدد";
-            const date = document.getElementById('car-date').value || "غير محدد";
-            const type = document.getElementById('car-type').value;
+.lang,
+.menu{
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--navy);
+    border-radius:9px;
+    padding:9px 11px;
+    font-size:11px;
+    font-weight:700;
+}
 
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بتأجير سيارة:\n- المدينة/المطار: ${city}\n- التاريخ: ${date}\n- الفئة: ${type}`;
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-    </script>
-</body>
-</html>
+.contact{
+    background:var(--navy);
+    color:#fff;
+    border-radius:9px;
+    padding:10px 15px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.menu{
+    display:none;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+
+    background:
+    radial-gradient(
+        circle at 80% 15%,
+        rgba(229,202,122,.20),
+        transparent 25%
+    ),
+
+    radial-gradient(
+        circle at 15% 35%,
+        rgba(23,103,168,.32),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        125deg,
+        #061728 0%,
+        #0A2A47 52%,
+        #12486F 100%
+    );
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    );
+
+    background-size:45px 45px;
+    opacity:.35;
+}
+
+.hero-inner{
+    max-width:1280px;
+    margin:auto;
+    min-height:520px;
+    padding:78px 22px 125px;
+
+    position:relative;
+    z-index:2;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:50px;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:clamp(36px,5.3vw,64px);
+    line-height:1.12;
+    max-width:730px;
+}
+
+.hero h1 em{
+    font-style:normal;
+    color:var(--gold2);
+}
+
+.hero-text{
+    font-size:15px;
+    color:#d7e3ed;
+    max-width:650px;
+    margin:20px 0 28px;
+}
+
+.hero-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.hero-pills span{
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.06);
+    padding:7px 11px;
+    border-radius:30px;
+    font-size:10px;
+    color:#e8eef3;
+}
+
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual{
+    height:350px;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.globe{
+    width:285px;
+    height:285px;
+    border-radius:50%;
+
+    border:1px solid rgba(229,202,122,.28);
+
+    background:
+    radial-gradient(
+        circle at 35% 30%,
+        #1d638d,
+        #09253e 62%,
+        #061827
+    );
+
+    box-shadow:
+    0 0 80px rgba(30,113,162,.22),
+    inset 0 0 50px rgba(0,0,0,.25);
+
+    position:relative;
+}
+
+.globe:before{
+    content:"";
+    position:absolute;
+    inset:20px;
+    border:1px dashed rgba(255,255,255,.16);
+    border-radius:50%;
+}
+
+.globe:after{
+    content:"✈";
+    position:absolute;
+    right:8px;
+    top:35px;
+
+    color:var(--gold2);
+    font-size:48px;
+
+    transform:rotate(-18deg);
+}
+
+.orbit{
+    position:absolute;
+    width:400px;
+    height:120px;
+
+    border:2px solid rgba(229,202,122,.38);
+    border-radius:50%;
+
+    transform:rotate(-18deg);
+}
+
+.orbit2{
+    position:absolute;
+    width:450px;
+    height:160px;
+
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:50%;
+
+    transform:rotate(22deg);
+}
+
+.visual-label{
+    position:absolute;
+    bottom:10px;
+    right:8px;
+
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.14);
+
+    backdrop-filter:blur(10px);
+
+    padding:12px 15px;
+    border-radius:12px;
+
+    font-size:11px;
+    color:#eef4f8;
+}
+
+.visual-label strong{
+    display:block;
+    color:var(--gold2);
+    font-size:15px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-wrap{
+    max-width:1160px;
+    margin:-72px auto 0;
+
+    position:relative;
+    z-index:10;
+
+    padding:0 18px;
+}
+
+.search-card{
+    background:#fff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 25px 65px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+    border:1px solid rgba(7,26,47,.06);
+}
+
+.search-tabs{
+    display:flex;
+    background:#f7f8fa;
+    border-bottom:1px solid var(--line);
+    overflow:auto;
+}
+
+.search-tab{
+    flex:1;
+    min-width:105px;
+
+    border:0;
+    background:transparent;
+
+    padding:17px 9px;
+
+    color:#69798A;
+
+    font-size:12px;
+    font-weight:800;
+
+    white-space:nowrap;
+}
+
+.search-tab i{
+    margin-left:6px;
+}
+
+.search-tab.active{
+    background:#fff;
+    color:var(--navy);
+
+    box-shadow:
+    inset 0 -3px 0 var(--red);
+}
+
+.search-body{
+    padding:22px;
+}
+
+.form{
+    display:grid;
+
+    grid-template-columns:
+    1.35fr
+    1.35fr
+    1fr
+    1fr
+    auto;
+
+    gap:10px;
+}
+
+.field{
+    min-height:67px;
+
+    border:1px solid #dce2e8;
+
+    border-radius:11px;
+
+    padding:8px 13px;
+
+    background:#fff;
+}
+
+.field:focus-within{
+    border-color:var(--gold);
+
+    box-shadow:
+    0 0 0 3px rgba(200,164,81,.12);
+}
+
+.field label{
+    display:block;
+
+    color:#8190a0;
+
+    font-size:10px;
+
+    margin-bottom:2px;
+}
+
+.field input,
+.field select{
+    width:100%;
+
+    border:0;
+    outline:0;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.search-btn{
+    border:0;
+
+    border-radius:11px;
+
+    min-width:125px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--gold2),
+        var(--gold)
+    );
+
+    color:var(--navy);
+
+    font-size:13px;
+    font-weight:900;
+
+    box-shadow:
+    0 8px 20px rgba(200,164,81,.20);
+}
+
+
+/* ================= TRUST ================= */
+
+.trust{
+    max-width:1160px;
+
+    margin:18px auto 0;
+
+    padding:0 18px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:10px;
+}
+
+.trust-item{
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:13px;
+
+    padding:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.trust-item i{
+    width:37px;
+    height:37px;
+
+    border-radius:10px;
+
+    background:#fbf6e9;
+
+    color:var(--gold);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+}
+
+.trust-item strong{
+    font-size:11px;
+    display:block;
+}
+
+.trust-item small{
+    font-size:9px;
+    color:var(--muted);
+}
+
+
+/* ================= MAIN ================= */
+
+main{
+    max-width:1200px;
+
+    margin:60px auto;
+
+    padding:0 20px;
+}
+
+.section-head{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin-bottom:20px;
+}
+
+.kicker{
+    color:var(--red);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+}
+
+.section-head h2{
+    color:var(--navy);
+
+    font-size:27px;
+
+    line-height:1.25;
+
+    margin-top:3px;
+}
+
+.section-head p{
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+.section-link{
+    border:0;
+    background:none;
+
+    color:var(--blue);
+
+    font-size:12px;
+
+    font-weight:800;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:12px;
+}
+
+.service{
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:16px;
+
+    padding:21px 16px;
+
+    transition:.25s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.service:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 55px rgba(7,26,47,.12);
+}
+
+.service:after{
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#f8f2e2;
+
+    left:-30px;
+    bottom:-35px;
+}
+
+.service i{
+    font-size:23px;
+
+    color:var(--red);
+
+    margin-bottom:18px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.service h3{
+    font-size:14px;
+
+    color:var(--navy);
+
+    position:relative;
+
+    z-index:1;
+}
+
+.service p{
+    font-size:10px;
+
+    color:var(--muted);
+
+    margin-top:4px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+
+/* ================= DESTINATIONS ================= */
+
+.destinations{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
+}
+
+.destination{
+    min-height:260px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+        145deg,
+        #17496d,
+        #9c8357
+    );
+
+    box-shadow:
+    0 12px 30px rgba(7,26,47,.10);
+}
+
+.destination:nth-child(2){
+    background:
+    linear-gradient(
+        145deg,
+        #0f3554,
+        #8d6d45
+    );
+}
+
+.destination:nth-child(3){
+    background:
+    linear-gradient(
+        145deg,
+        #263e53,
+        #a8a58d
+    );
+}
+
+.destination:nth-child(4){
+    background:
+    linear-gradient(
+        145deg,
+        #0d314f,
+        #3d718e
+    );
+}
+
+.destination:before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.76)
+    );
+}
+
+.destination-icon{
+    position:absolute;
+
+    top:18px;
+    left:18px;
+
+    width:38px;
+    height:38px;
+
+    border:
+    1px solid rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+}
+
+.destination-info{
+    position:absolute;
+
+    bottom:17px;
+
+    right:17px;
+    left:17px;
+}
+
+.destination-info h3{
+    font-size:20px;
+}
+
+.destination-info p{
+    font-size:10px;
+
+    color:#e7edf2;
+}
+
+.destination-info span{
+    display:inline-block;
+
+    margin-top:8px;
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    padding:4px 8px;
+
+    border-radius:20px;
+
+    font-size:9px;
+}
+
+
+/* ================= OFFERS ================= */
+
+.offers{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:16px;
+}
+
+.offer{
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:17px;
+
+    overflow:hidden;
+}
+
+.offer-cover{
+    height:150px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b2a46,
+        #2f678c
+    );
+
+    position:relative;
+}
+
+.offer:nth-child(2)
+.offer-cover{
+    background:
+    linear-gradient(
+        135deg,
+        #23394b,
+        #a08255
+    );
+}
+
+.offer:nth-child(3)
+.offer-cover{
+    background:
+    linear-gradient(
+        135deg,
+        #122f47,
+        #55788e
+    );
+}
+
+.offer-cover i{
+    position:absolute;
+
+    bottom:17px;
+    left:19px;
+
+    color:#fff;
+
+    font-size:35px;
+}
+
+.badge{
+    position:absolute;
+
+    top:13px;
+    right:13px;
+
+    background:var(--gold2);
+
+    color:var(--navy);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    padding:4px 8px;
+
+    border-radius:6px;
+}
+
+.offer-body{
+    padding:16px;
+}
+
+.offer-body h3{
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.stars{
+    color:#caa54f;
+
+    font-size:11px;
+
+    margin:3px 0;
+}
+
+.offer-body p{
+    color:var(--muted);
+
+    font-size:10px;
+}
+
+.offer-bottom{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:12px;
+}
+
+.offer-bottom strong{
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.offer-btn{
+    border:
+    1px solid var(--navy);
+
+    background:#fff;
+
+    color:var(--navy);
+
+    padding:8px 11px;
+
+    border-radius:8px;
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.offer-btn:hover{
+    background:var(--navy);
+    color:#fff;
+}
+
+
+/* ================= BUSINESS ================= */
+
+.business{
+    margin-top:60px;
+
+    border-radius:23px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        125deg,
+        #061728,
+        #103e60
+    );
+
+    color:#fff;
+
+    position:relative;
+}
+
+.business-inner{
+    padding:42px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.business small{
+    color:var(--gold2);
+
+    letter-spacing:2px;
+
+    font-weight:800;
+}
+
+.business h2{
+    font-size:30px;
+
+    margin:6px 0;
+}
+
+.business p{
+    color:#cfdae3;
+
+    font-size:12px;
+
+    max-width:700px;
+}
+
+.business-btn{
+    border:0;
+
+    background:var(--gold2);
+
+    color:var(--navy);
+
+    border-radius:10px;
+
+    padding:13px 20px;
+
+    font-weight:900;
+
+    white-space:nowrap;
+}
+
+.business-mark{
+    position:absolute;
+
+    font-family:Georgia,serif;
+
+    font-size:180px;
+
+    color:rgba(255,255,255,.025);
+
+    left:20px;
+    top:-35px;
+}
+
+
+/* ================= RESULTS ================= */
+
+.results{
+    display:none;
+
+    margin-top:55px;
+}
+
+.results.show{
+    display:block;
+}
+
+.result-grid{
+    display:grid;
+
+    grid-template-columns:
+    220px 1fr;
+
+    gap:16px;
+}
+
+.filters,
+.result-card{
+    background:#fff;
+
+    border:1px solid var(--line);
+
+    border-radius:15px;
+}
+
+.filters{
+    padding:17px;
+
+    height:max-content;
+}
+
+.filters h3{
+    font-size:14px;
+
+    color:var(--navy);
+
+    margin-bottom:10px;
+}
+
+.filter{
+    padding:12px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.filter:last-child{
+    border:0;
+}
+
+.filter label{
+    font-size:10px;
+
+    color:var(--muted);
+
+    display:block;
+
+    margin-bottom:5px;
+}
+
+.filter select{
+    width:100%;
+
+    border:1px solid var(--line);
+
+    border-radius:8px;
+
+    padding:8px;
+
+    font-size:10px;
+}
+
+.result-list{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.result-card{
+    padding:13px;
+
+    display:grid;
+
+    grid-template-columns:
+    145px 1fr auto;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+.result-image{
+    height:112px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #143b59,
+        #9c7d4e
+    );
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:30px;
+}
+
+.result-card h3{
+    font-size:15px;
+
+    color:var(--navy);
+}
+
+.result-card p{
+    font-size:10px;
+
+    color:var(--muted);
+}
+
+.result-price{
+    text-align:left;
+}
+
+.result-price strong{
+    display:block;
+
+    font-size:18px;
+
+    color:var(--navy);
+}
+
+.result-price small{
+    font-size:9px;
+
+    color:var(--muted);
+}
+
+.book{
+    border:0;
+
+    background:var(--navy);
+
+    color:#fff;
+
+    border-radius:8px;
+
+    padding:9px 12px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    margin-top:8px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:70px;
+
+    background:var(--navy);
+
+    color:#fff;
+
+    padding:45px 20px 22px;
+}
+
+.footer-grid{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1fr;
+
+    gap:28px;
+}
+
+.footer-col h3{
+    font-size:13px;
+
+    color:var(--gold2);
+
+    margin-bottom:13px;
+}
+
+.footer-col p,
+.footer-col li{
+    font-size:10px;
+
+    color:#b9c7d3;
+
+    margin-bottom:7
