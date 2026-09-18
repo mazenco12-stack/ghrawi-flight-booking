@@ -12,7 +12,7 @@
             --accent-gold: #D4AF37;
             --light-gold: #F4E0A5;
             --white: #FFFFFF;
-            --gray-bg: #F8F9FA;
+            --gray-bg: #F4F6F9;
         }
 
         * {
@@ -26,94 +26,53 @@
             background-color: var(--gray-bg);
             color: #333;
             line-height: 1.6;
-            padding-bottom: 70px;
+            padding-bottom: 80px;
         }
 
         /* Header */
         header {
             background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
             color: var(--white);
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 20px 15px;
+            text-align: center;
             border-bottom: 3px solid var(--accent-gold);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .logo-area h1 {
             font-size: 22px;
             color: var(--accent-gold);
+            margin-bottom: 4px;
         }
 
-        .contact-header a {
+        .logo-area small {
+            font-size: 12px;
             color: var(--light-gold);
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 15px;
+            letter-spacing: 0.5px;
         }
 
-        /* Main Container */
+        /* Main Card Container */
         .container {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 500px;
+            margin: 25px auto;
             background: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
             overflow: hidden;
-            border: 1px solid #E0E0E0;
+            border: 1px solid #E2E8F0;
+            width: 92%;
         }
 
-        /* Tabs */
-        .tabs {
-            display: flex;
-            background-color: var(--primary-navy);
-            border-bottom: 2px solid var(--accent-gold);
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .tab-btn:hover, .tab-btn.active {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-        }
-
-        /* Form Styling */
-        .tab-content {
-            display: none;
-            padding: 30px;
-        }
-
-        .tab-content.active {
-            display: block;
+        /* Form Wrapper */
+        .form-content {
+            padding: 25px 20px;
         }
 
         .form-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 22px;
         }
 
         .form-group {
@@ -123,75 +82,71 @@
         }
 
         .form-group label {
-            font-weight: bold;
+            font-weight: 700;
             color: var(--primary-navy);
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .form-group input, .form-group select {
-            padding: 12px;
-            border: 1px solid #CCC;
-            border-radius: 6px;
-            font-size: 14px;
+        .form-group label i {
+            color: var(--accent-gold);
+        }
+
+        .form-group input {
+            padding: 14px 16px;
+            border: 1.5px solid #CBD5E1;
+            border-radius: 10px;
+            font-size: 15px;
             outline: none;
+            width: 100%;
+            background-color: #FAFAFA;
+            transition: all 0.3s ease;
         }
 
-        .form-group input:focus, .form-group select:focus {
+        .form-group input:focus {
             border-color: var(--accent-gold);
-            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
         }
 
         .submit-btn {
             width: 100%;
-            padding: 15px;
+            padding: 16px;
             background: linear-gradient(135deg, var(--accent-gold), #B8860B);
             color: var(--primary-navy);
             border: none;
-            border-radius: 6px;
-            font-size: 18px;
+            border-radius: 10px;
+            font-size: 17px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
 
         .submit-btn:hover {
-            opacity: 0.9;
+            opacity: 0.95;
             transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-navy);
-            color: var(--white);
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            border-top: 3px solid var(--accent-gold);
-        }
-
-        .footer-links a {
-            color: var(--light-gold);
-            text-decoration: none;
-            margin: 0 10px;
         }
 
         /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 25px;
+            left: 25px;
             background-color: #25D366;
             color: white;
             width: 60px;
             height: 60px;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            font-size: 32px;
+            box-shadow: 2px 4px 15px rgba(0,0,0,0.25);
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -203,6 +158,14 @@
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #64748B;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
@@ -210,100 +173,31 @@
     <!-- Header -->
     <header>
         <div class="logo-area">
-            <i class="fa-solid fa-earth-americas fa-2x" style="color: var(--accent-gold);"></i>
-            <div>
-                <h1>غراوي للسياحة والسفر</h1>
-                <small style="color: var(--light-gold);">Ghrawi Travel & Tourism | Global Services</small>
-            </div>
-        </div>
-        <div class="contact-header">
-            <a href="https://wa.me/963933535323" target="_blank"><i class="fa-brands fa-whatsapp"></i> خدمة العملاء الدولية</a>
+            <i class="fa-solid fa-plane-departure fa-2x" style="color: var(--accent-gold); margin-bottom: 8px;"></i>
+            <h1>غراوي للسياحة والسفر</h1>
+            <small>Ghrawi Travel & Tourism</small>
         </div>
     </header>
 
-    <!-- Booking Interface -->
+    <!-- Main Container -->
     <div class="container">
-        <div class="tabs">
-            <button class="tab-btn active" onclick="openTab('flights')"><i class="fa-solid fa-plane"></i> حجوزات طيران</button>
-            <button class="tab-btn" onclick="openTab('hotels')"><i class="fa-solid fa-hotel"></i> حجوزات فنادق</button>
-            <button class="tab-btn" onclick="openTab('cars')"><i class="fa-solid fa-car"></i> تأجير سيارات</button>
-        </div>
-
-        <!-- Flights Tab -->
-        <div id="flights" class="tab-content active">
+        <div class="form-content">
             <div class="form-grid">
+                <!-- المربع الأول -->
                 <div class="form-group">
-                    <label>مدينة المغادرة</label>
-                    <input type="text" id="flight-from" placeholder="مثال: دبي / إسطنبول / القاهرة">
+                    <label><i class="fa-solid fa-plane-departure"></i> مدينة المغادرة</label>
+                    <input type="text" id="flight-from" placeholder="مثال: دبي / إسطنبول / دمشق">
                 </div>
+
+                <!-- المربع الثاني -->
                 <div class="form-group">
-                    <label>وجهة الوصول</label>
-                    <input type="text" id="flight-to" placeholder="مثال: لندن / باريس / أمين">
-                </div>
-                <div class="form-group">
-                    <label>تاريخ السفر</label>
-                    <input type="date" id="flight-date">
-                </div>
-                <div class="form-group">
-                    <label>عدد المسافرين</label>
-                    <select id="flight-passengers">
-                        <option>1 بالغ</option>
-                        <option>2 بالغين</option>
-                        <option>عائلة (بالغين وأطفال)</option>
-                    </select>
+                    <label><i class="fa-solid fa-plane-arrival"></i> وجهة الوصول</label>
+                    <input type="text" id="flight-to" placeholder="مثال: لندن / باريس / برلين">
                 </div>
             </div>
-            <button class="submit-btn" onclick="bookFlight()"><i class="fa-brands fa-whatsapp"></i> احجز الطيران المباشر</button>
-        </div>
 
-        <!-- Hotels Tab -->
-        <div id="hotels" class="tab-content">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>المدينة أو الوجهة الفندقية</label>
-                    <input type="text" id="hotel-city" placeholder="مثال: إسطنبول / دبي / كوالالمبور">
-                </div>
-                <div class="form-group">
-                    <label>تاريخ الوصول</label>
-                    <input type="date" id="hotel-checkin">
-                </div>
-                <div class="form-group">
-                    <label>تاريخ المغادرة</label>
-                    <input type="date" id="hotel-checkout">
-                </div>
-                <div class="form-group">
-                    <label>نوع الإقامة</label>
-                    <select id="hotel-rooms">
-                        <option>غرفة مفردة / مزدوجة</option>
-                        <option>جناح عائلي</option>
-                        <option>منتجع فاخر</option>
-                    </select>
-                </div>
-            </div>
-            <button class="submit-btn" onclick="bookHotel()"><i class="fa-brands fa-whatsapp"></i> استفسر واحجز الفندق</button>
-        </div>
-
-        <!-- Cars Tab -->
-        <div id="cars" class="tab-content">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>مدينة الاستلام</label>
-                    <input type="text" id="car-city" placeholder="ادخل اسم المدينة أو المطار">
-                </div>
-                <div class="form-group">
-                    <label>تاريخ الاستلام</label>
-                    <input type="date" id="car-date">
-                </div>
-                <div class="form-group">
-                    <label>فئة السيارة</label>
-                    <select id="car-type">
-                        <option>اقتصادية</option>
-                        <option>عائلية / SUV</option>
-                        <option>فاخرة / VIP</option>
-                    </select>
-                </div>
-            </div>
-            <button class="submit-btn" onclick="bookCar()"><i class="fa-brands fa-whatsapp"></i> احجز السيارة الآن</button>
+            <!-- زر الحجز الفوري -->
+            <button class="submit-btn" onclick="sendBooking()"><i class="fa-brands fa-whatsapp"></i> استفسر واحجز الآن</button>
         </div>
     </div>
 
@@ -314,55 +208,18 @@
 
     <!-- Footer -->
     <footer>
-        <p><strong>غراوي للسياحة والسفر</strong> | بوابتك الفاخرة لكل العالم</p>
-        <p><i class="fa-solid fa-globe"></i> خدمات سياحة وحجوزات دولية حول العالم</p>
-        <div class="footer-links" style="margin-top: 10px;">
-            <a href="https://wa.me/963933535323" target="_blank"><i class="fa-brands fa-whatsapp"></i> +963 933 535 323</a> | 
-            <a href="https://wa.me/963992211043" target="_blank"><i class="fa-brands fa-whatsapp"></i> +963 992 211 043</a>
-        </div>
+        <p>غراوي للسياحة والسفر | بوابتك للترحال الدولي</p>
     </footer>
 
-    <!-- Interactive JavaScript -->
+    <!-- Script -->
     <script>
-        function openTab(tabName) {
-            const contents = document.querySelectorAll('.tab-content');
-            const buttons = document.querySelectorAll('.tab-btn');
-            
-            contents.forEach(content => content.classList.remove('active'));
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-
         const whatsappNumber = "963933535323";
 
-        function bookFlight() {
+        function sendBooking() {
             const from = document.getElementById('flight-from').value || "غير محدد";
             const to = document.getElementById('flight-to').value || "غير محدد";
-            const date = document.getElementById('flight-date').value || "غير محدد";
-            const passengers = document.getElementById('flight-passengers').value;
 
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بحجز طيران دولي:\n- المغادرة: ${from}\n- الوجهة: ${to}\n- التاريخ: ${date}\n- المسافرين: ${passengers}`;
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        function bookHotel() {
-            const city = document.getElementById('hotel-city').value || "غير محدد";
-            const checkin = document.getElementById('hotel-checkin').value || "غير محدد";
-            const checkout = document.getElementById('hotel-checkout').value || "غير محدد";
-            const rooms = document.getElementById('hotel-rooms').value;
-
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بحجز فندق:\n- الوجهة: ${city}\n- الوصول: ${checkin}\n- المغادرة: ${checkout}\n- تفاصيل الإقامة: ${rooms}`;
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        function bookCar() {
-            const city = document.getElementById('car-city').value || "غير محدد";
-            const date = document.getElementById('car-date').value || "غير محدد";
-            const type = document.getElementById('car-type').value;
-
-            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بتأجير سيارة:\n- المدينة/المطار: ${city}\n- التاريخ: ${date}\n- الفئة: ${type}`;
+            const msg = `مرحباً غراوي للسياحة والسفر، أرغب بالاستفسار والحجز:\n- من: ${from}\n- إلى: ${to}`;
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
