@@ -21,19 +21,12 @@
 <meta name="twitter:title" content="غراوي للسياحة والسفر | GHRAWI Travel">
 <meta name="twitter:description" content="رحلات وفنادق وسيارات وخدمات سفر متكاملة">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b2442'/%3E%3Cstop offset='1' stop-color='%23123c62'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='200' height='200' rx='36' fill='url(%23g)'/%3E%3Ctext x='100' y='115' font-family='Arial,sans-serif' font-size='110' font-weight='900' fill='%23e8c348' text-anchor='middle' dominant-baseline='middle'%3EG%3C/text%3E%3Ccircle cx='100' cy='36' r='7' fill='%23ed1c24'/%3E%3C/svg%3E">
+<!-- Favicon للشعار الرسمي -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cpath d='M 70 230 C 30 250, 30 270, 80 270 C 180 270, 380 210, 420 180 C 440 165, 410 150, 320 175 C 220 200, 100 215, 70 230 Z' fill='%23ed1c24'/%3E%3Cpath d='M 270 50 C 180 50, 130 110, 130 170 C 130 210, 150 230, 150 230 C 150 230, 120 270, 120 310 C 120 380, 190 430, 290 430 C 380 430, 410 380, 410 320 C 410 260, 330 240, 230 240 L 205 315 C 280 315, 340 320, 340 345 C 340 370, 310 380, 280 380 C 210 380, 180 340, 180 310 C 180 290, 190 270, 210 250 L 235 250 C 350 250, 450 280, 450 330 C 450 420, 360 470, 280 470 C 150 470, 70 390, 70 300 C 70 250, 95 200, 120 170 C 100 200, 90 230, 90 260 C 90 270, 80 260, 80 240 C 80 160, 150 100, 250 100 C 330 100, 370 130, 395 160 C 360 90, 320 50, 270 50 Z' fill='%231b365d'/%3E%3Cg transform='translate(425, 170) rotate(15) scale(0.8)'%3E%3Cpath d='M0,0 L15,-30 L25,-28 L15,-8 L40,-3 L48,-12 L55,-10 L50,5 L55,20 L48,22 L40,13 L15,8 L25,28 L15,30 Z' fill='%23ed1c24'/%3E%3C/g%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
 
 <script type="application/ld+json">
 {
@@ -41,7 +34,7 @@
   "@type":"TravelAgency",
   "name":"غراوي للسياحة والسفر",
   "alternateName":"Ghrawi Travel & Tourism",
-  "telephone":["+963933535323","+963992211043"],
+  "telephone":["+963933535323","+963992211043","+963113322679"],
   "priceRange":"$$",
   "address":{"@type":"PostalAddress","addressLocality":"Damascus","addressCountry":"SY"},
   "openingHours":"Mo-Su 09:00-21:00"
@@ -65,8 +58,8 @@ img{max-width:100%;height:auto;display:block}
 
 /* ===== Header ===== */
 header{position:sticky;top:0;z-index:20;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;background:#fffffff2;backdrop-filter:blur(10px);box-shadow:0 2px 14px #0000000f}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.logo-svg{height:52px;width:52px;flex-shrink:0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo-svg{height:58px;width:auto;flex-shrink:0}
 .brand-text{font-weight:800;font-size:17px;line-height:1.2}
 .brand-text small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px}
 nav{display:flex;gap:25px}
@@ -99,7 +92,6 @@ label{font-size:13px;font-weight:700;display:block;margin-bottom:5px}
 label .req{color:var(--red)}
 input,select,textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-size:15px;background:#fff;color:var(--ink);transition:border-color .2s}
 input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:none}
-input:invalid:not(:placeholder-shown){border-color:var(--red)}
 .submit{border:0;background:var(--red-btn);color:#fff;padding:15px;border-radius:11px;font-size:16px;font-weight:700;cursor:pointer;width:100%;transition:background .2s}
 .submit:hover{background:#b8151c}
 .flow{margin:14px 0 0;text-align:center;font-size:13px;color:var(--muted)}
@@ -144,31 +136,19 @@ h2{text-align:center;font-size:clamp(22px,3vw,28px);margin:0 0 6px}
 .biz-art span{font-size:26px;color:var(--gold);font-weight:700}
 
 /* ===== Footer ===== */
-footer{background:var(--deep);color:#fff;text-align:center;padding:35px 15px 90px;margin-top:60px}
+footer{background:var(--deep);color:#fff;text-align:center;padding:40px 20px 90px;margin-top:60px;border-top:2px solid #123c62}
 footer p{margin:6px 0}
 footer a{color:#fff;text-decoration:none}
 footer a:hover{color:var(--gold)}
-.footer-logo{height:70px;width:70px;margin:0 auto 10px}
-.copy{color:#aab6c6;font-size:13px}
+.footer-logo{height:80px;width:auto;margin:0 auto 12px}
+.footer-contacts{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:18px 0;font-size:15px;direction:ltr}
+.footer-contacts a{background:#ffffff10;padding:8px 16px;border-radius:8px;transition:background .2s}
+.footer-contacts a:hover{background:#ffffff22;color:var(--gold)}
+.copy{color:#aab6c6;font-size:13px;margin-top:15px}
 
 /* ===== Floating WhatsApp ===== */
 .wa-float{position:fixed;z-index:15;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;box-shadow:0 8px 24px #0004;display:flex;align-items:center;gap:8px;transition:transform .2s}
 .wa-float:hover{transform:scale(1.05)}
-
-/* ===== Modal ===== */
-dialog{border:0;border-radius:18px;padding:0;max-width:520px;width:calc(100% - 32px);color:var(--ink);max-height:90vh}
-dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
-.modal-box{padding:25px;position:relative;max-height:88vh;overflow-y:auto}
-.modal-box h2{text-align:right;font-size:22px;margin-bottom:14px}
-.close{position:absolute;top:14px;left:14px;border:0;border-radius:50%;width:36px;height:36px;background:#eef1f5;font-size:20px;cursor:pointer;transition:background .2s}
-.close:hover{background:#dfe3e8}
-.summary{background:#f3f5f7;border-radius:10px;padding:14px 16px;margin:0 0 14px}
-.summary div{display:flex;gap:8px;padding:3px 0;font-size:14px}
-.summary dt{font-weight:700;min-width:90px;color:var(--navy)}
-.summary dd{margin:0}
-.summary .title{font-weight:800;margin-bottom:8px;color:var(--navy);font-size:16px;border-bottom:1px solid var(--line);padding-bottom:6px}
-.modal-box .field{margin-bottom:12px}
-.modal-box .field label{font-size:13px}
 
 /* ===== Responsive ===== */
 @media(max-width:900px){
@@ -176,7 +156,7 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
 }
 @media(max-width:750px){
   header{padding:8px 16px}
-  .logo-svg{height:44px;width:44px}
+  .logo-svg{height:46px}
   .brand-text{font-size:14px}
   nav{display:none;position:absolute;top:100%;right:0;left:0;background:#fff;flex-direction:column;gap:0;padding:6px 18px 14px;box-shadow:0 12px 24px #0002}
   nav.open{display:flex}
@@ -196,11 +176,6 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
   .biz-art span{font-size:20px}
   .wrap{margin:45px auto}
 }
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .destination img{transition:none}
-  .btn:hover,.wa-float:hover,.wa:hover{transform:none}
-}
 </style>
 </head>
 
@@ -209,18 +184,12 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
 <!-- ===== Header ===== -->
 <header>
   <a class="brand" href="#top" aria-label="الصفحة الرئيسية">
-    <!-- الشعار SVG مضمّن مباشرة -->
-    <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#0b2442"/>
-          <stop offset="1" stop-color="#123c62"/>
-        </linearGradient>
-      </defs>
-      <rect width="200" height="200" rx="36" fill="url(#lg)"/>
-      <text x="100" y="118" font-family="Arial,sans-serif" font-size="110" font-weight="900" fill="#e8c348" text-anchor="middle" dominant-baseline="middle">G</text>
-      <circle cx="100" cy="34" r="7" fill="#ed1c24"/>
-      <text x="100" y="178" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">GHRAWI</text>
+    <svg class="logo-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Ghrawi Travel Logo">
+      <path d="M 70 230 C 30 250, 30 270, 80 270 C 180 270, 380 210, 420 180 C 440 165, 410 150, 320 175 C 220 200, 100 215, 70 230 Z" fill="#ed1c24"/>
+      <path d="M 270 50 C 180 50, 130 110, 130 170 C 130 210, 150 230, 150 230 C 150 230, 120 270, 120 310 C 120 380, 190 430, 290 430 C 380 430, 410 380, 410 320 C 410 260, 330 240, 230 240 L 205 315 C 280 315, 340 320, 340 345 C 340 370, 310 380, 280 380 C 210 380, 180 340, 180 310 C 180 290, 190 270, 210 250 L 235 250 C 350 250, 450 280, 450 330 C 450 420, 360 470, 280 470 C 150 470, 70 390, 70 300 C 70 250, 95 200, 120 170 C 100 200, 90 230, 90 260 C 90 270, 80 260, 80 240 C 80 160, 150 100, 250 100 C 330 100, 370 130, 395 160 C 360 90, 320 50, 270 50 Z" fill="#1b365d"/>
+      <g transform="translate(425, 170) rotate(15) scale(0.8)">
+        <path d="M0,0 L15,-30 L25,-28 L15,-8 L40,-3 L48,-12 L55,-10 L50,5 L55,20 L48,22 L40,13 L15,8 L25,28 L15,30 Z" fill="#ed1c24"/>
+      </g>
     </svg>
     <span class="brand-text">غراوي للسياحة<small>GHRAWI TRAVEL</small></span>
   </a>
@@ -263,8 +232,10 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
     <button type="button" role="tab" id="t-vip" data-tab="vip" aria-selected="false" tabindex="-1" aria-controls="vip">💎 VIP</button>
   </div>
 
-  <form class="panel" id="flight" role="tabpanel" aria-labelledby="t-flight" data-title="✈️ طلب حجز طيران">
+  <form class="panel" id="flight" role="tabpanel" aria-labelledby="t-flight" data-title="حجز طيران">
     <div class="grid">
+      <div><label for="f-name">الاسم الكريم <span class="req">*</span></label><input id="f-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="f-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="f-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="f-from">من <span class="req">*</span></label><input id="f-from" data-label="من" placeholder="دمشق" required></div>
       <div><label for="f-to">إلى <span class="req">*</span></label><input id="f-to" data-label="إلى" placeholder="الوجهة" required></div>
       <div><label for="f-fd">تاريخ المغادرة <span class="req">*</span></label><input id="f-fd" data-label="المغادرة" type="date" required></div>
@@ -273,58 +244,68 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
       <div><label for="f-cls">درجة السفر</label>
         <select id="f-cls" data-label="الدرجة"><option>اقتصادية</option><option>رجال أعمال</option><option>درجة أولى</option></select></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <form class="panel" id="hotel" role="tabpanel" aria-labelledby="t-hotel" data-title="🏨 طلب حجز فندق" hidden>
+  <form class="panel" id="hotel" role="tabpanel" aria-labelledby="t-hotel" data-title="حجز فندق" hidden>
     <div class="grid">
+      <div><label for="h-name">الاسم الكريم <span class="req">*</span></label><input id="h-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="h-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="h-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="h-city">المدينة <span class="req">*</span></label><input id="h-city" data-label="المدينة" placeholder="دبي" required></div>
       <div><label for="h-in">تاريخ الدخول <span class="req">*</span></label><input id="h-in" data-label="الدخول" type="date" required></div>
       <div><label for="h-out">تاريخ الخروج <span class="req">*</span></label><input id="h-out" data-label="الخروج" type="date" required></div>
       <div><label for="h-rooms">عدد الغرف <span class="req">*</span></label><input id="h-rooms" data-label="الغرف" type="number" value="1" min="1" max="20" required></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <form class="panel" id="car" role="tabpanel" aria-labelledby="t-car" data-title="🚘 طلب سيارة" hidden>
+  <form class="panel" id="car" role="tabpanel" aria-labelledby="t-car" data-title="تأجير سيارة" hidden>
     <div class="grid">
+      <div><label for="c-name">الاسم الكريم <span class="req">*</span></label><input id="c-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="c-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="c-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="c-city">المدينة <span class="req">*</span></label><input id="c-city" data-label="المدينة" placeholder="دبي" required></div>
       <div><label for="c-date">التاريخ <span class="req">*</span></label><input id="c-date" data-label="التاريخ" type="date" required></div>
       <div><label for="c-type">نوع السيارة</label>
         <select id="c-type" data-label="السيارة"><option>اقتصادية</option><option>عائلية</option><option>VIP</option></select></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <form class="panel" id="visa" role="tabpanel" aria-labelledby="t-visa" data-title="🛂 طلب تأشيرة / تأمين" hidden>
+  <form class="panel" id="visa" role="tabpanel" aria-labelledby="t-visa" data-title="طلب تأشيرة / تأمين" hidden>
     <div class="grid">
+      <div><label for="v-name">الاسم الكريم <span class="req">*</span></label><input id="v-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="v-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="v-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="v-country">الدولة المطلوبة <span class="req">*</span></label><input id="v-country" data-label="الدولة" placeholder="الدولة" required></div>
       <div><label for="v-type">الخدمة</label>
         <select id="v-type" data-label="الخدمة"><option>استشارة تأشيرة</option><option>تقديم طلب</option><option>تأمين سفر</option></select></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <form class="panel" id="tour" role="tabpanel" aria-labelledby="t-tour" data-title="🌍 طلب رحلة سياحية" hidden>
+  <form class="panel" id="tour" role="tabpanel" aria-labelledby="t-tour" data-title="طلب رحلة سياحية" hidden>
     <div class="grid">
+      <div><label for="t-name">الاسم الكريم <span class="req">*</span></label><input id="t-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="t-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="t-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="tc">الوجهة <span class="req">*</span></label><input id="tc" data-label="الوجهة" placeholder="تركيا، دبي، أوروبا..." required></div>
       <div><label for="tp">عدد الأشخاص <span class="req">*</span></label><input id="tp" data-label="الأشخاص" type="number" value="1" min="1" max="100" required></div>
       <div><label for="tt">نوع الرحلة</label>
         <select id="tt" data-label="النوع"><option>عائلية</option><option>فردية</option><option>VIP</option><option>Business</option></select></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <form class="panel" id="vip" role="tabpanel" aria-labelledby="t-vip" data-title="💎 طلب Business &amp; VIP" hidden>
+  <form class="panel" id="vip" role="tabpanel" aria-labelledby="t-vip" data-title="خدمات Business & VIP" hidden>
     <div class="grid">
+      <div><label for="vp-name">الاسم الكريم <span class="req">*</span></label><input id="vp-name" data-label="الاسم" placeholder="اسمك الكامل" required></div>
+      <div><label for="vp-phone">رقم الواتساب للتواصل <span class="req">*</span></label><input id="vp-phone" data-label="رقم الهاتف" placeholder="09xxxxxxxx" required></div>
       <div><label for="vs">الخدمة</label>
         <select id="vs" data-label="الخدمة"><option>استقبال VIP</option><option>سيارة مع سائق</option><option>رحلة أعمال</option><option>المعارض والمؤتمرات</option><option>تنسيق وفد</option></select></div>
       <div><label for="vd">الوجهة <span class="req">*</span></label><input id="vd" data-label="الوجهة" placeholder="المدينة / الدولة" required></div>
     </div>
-    <button class="submit" type="submit">متابعة الطلب</button>
+    <button class="submit" type="submit">متابعة الطلب عبر واتساب</button>
   </form>
 
-  <p class="flow">عبّئ الطلب، راجعه، وأرسله عبر واتساب. نرد عليك بالخيارات والأسعار.</p>
+  <p class="flow">عبّئ الطلب، اضغط متابعة، وسينتقلك مباشرة إلى واتساب لمعرفة الأسعار والخيارات.</p>
 
 </div>
 
@@ -407,4 +388,115 @@ dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
 
   <details class="faq-item">
     <summary>ما هي طرق الدفع المتاحة؟</summary>
-    <p>تحويل بنكي، حوالات، ونقدًا في المكتب. نتفق على التفاص
+    <p>تحويل بنكي، حوالات، ونقدًا في المكتب. نتفق على التفاصيل عند تأكيد الحجز.</p>
+  </details>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer id="contact">
+  <svg class="footer-logo" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Ghrawi Travel Logo">
+    <path d="M 70 230 C 30 250, 30 270, 80 270 C 180 270, 380 210, 420 180 C 440 165, 410 150, 320 175 C 220 200, 100 215, 70 230 Z" fill="#ed1c24"/>
+    <path d="M 270 50 C 180 50, 130 110, 130 170 C 130 210, 150 230, 150 230 C 150 230, 120 270, 120 310 C 120 380, 190 430, 290 430 C 410 380, 410 320, 410 260, 330 240, 230 240 L 205 315 C 280 315, 340 320, 340 345 C 340 370, 310 380, 280 380 C 210 380, 180 340, 180 310 C 180 290, 190 270, 210 250 L 235 250 C 350 250, 450 280, 450 330 C 450 420, 360 470, 280 470 C 150 470, 70 390, 70 300 C 70 250, 95 200, 120 170 C 100 200, 90 230, 90 260 C 90 270, 80 260, 80 240 C 80 160, 150 100, 250 100 C 330 100, 370 130, 395 160 C 360 90, 320 50, 270 50 Z" fill="#ffffff"/>
+    <g transform="translate(425, 170) rotate(15) scale(0.8)">
+      <path d="M0,0 L15,-30 L25,-28 L15,-8 L40,-3 L48,-12 L55,-10 L50,5 L55,20 L48,22 L40,13 L15,8 L25,28 L15,30 Z" fill="#ed1c24"/>
+    </g>
+  </svg>
+  <p><strong>غراوي للسياحة والسفر | Ghrawi Travel &amp; Tourism</strong></p>
+  <p>دمشق، شارع الحمراء</p>
+  
+  <div class="footer-contacts">
+    <a href="tel:+963933535323">📱 0933 535 323</a>
+    <a href="tel:+963992211043">📱 0992 211 043</a>
+    <a href="tel:+963113322679">☎️ 011 3322679</a>
+  </div>
+
+  <p class="copy">جميع الحقوق محفوظة © 2026 غراوي للسياحة والسفر</p>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="wa-float" href="https://wa.me/963933535323" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">
+  💬 تواصل معنا
+</a>
+
+<!-- JavaScript -->
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => {
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+
+  // Close menu when clicking links on mobile
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Tabs switching logic
+  const tabs = document.querySelectorAll('.tabs button');
+  const panels = document.querySelectorAll('form.panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(p => p.hidden = true);
+
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const targetPanel = document.getElementById(tab.dataset.tab);
+      if(targetPanel) targetPanel.hidden = false;
+    });
+  });
+
+  // Destinations click to prepopulate tour form
+  const destButtons = document.querySelectorAll('.destination');
+  destButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const destName = btn.dataset.dest;
+      const tourTab = document.getElementById('t-tour');
+      if(tourTab) tourTab.click();
+      const tourInput = document.getElementById('tc');
+      if(tourInput) {
+        tourInput.value = destName;
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Send Form Data to WhatsApp
+  const MAIN_PHONE = "963933535323";
+
+  document.querySelectorAll('form.panel').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = form.dataset.title || 'طلب خدمة';
+      let message = `مرحباً مكتب غراوي للسياحة والسفر، أرغب بـ *${title}*:\n\n`;
+
+      const inputs = form.querySelectorAll('input, select');
+      inputs.forEach(input => {
+        const label = input.getAttribute('data-label') || input.id;
+        if(input.value) {
+          message += `• *${label}*: ${input.value}\n`;
+        }
+      });
+
+      message += `\nيرجى تزويدي بالخيارات والأسعار المتاحة. شكراً لكم!`;
+
+      const waUrl = `https://wa.me/${MAIN_PHONE}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+    });
+  });
+</script>
+
+</body>
+</html>
