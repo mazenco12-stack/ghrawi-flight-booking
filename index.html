@@ -2,75 +2,226 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>غراوي للسياحة والسفر | GHRAWI Travel</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>غراوي للسياحة والسفر | GHRAWI Travel — حجز طيران وفنادق وتأشيرات في دمشق</title>
+<meta name="description" content="غراوي للسياحة والسفر في دمشق: حجز طيران وفنادق وسيارات، تأشيرات، رحلات سياحية، وخدمات Business & VIP. تواصل عبر واتساب فوراً.">
+<meta name="keywords" content="سفر, سياحة, حجز طيران, فنادق, تأشيرات, دمشق, سوريا, Ghrawi Travel, رحلات, VIP">
+<meta name="author" content="Ghrawi Travel & Tourism">
+<meta name="theme-color" content="#0b2442">
+<meta name="robots" content="index, follow">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="غراوي للسياحة والسفر | GHRAWI Travel">
+<meta property="og:description" content="رحلات وفنادق وسيارات وخدمات سفر متكاملة للأفراد ورجال الأعمال والضيوف VIP.">
+<meta property="og:locale" content="ar_SY">
+<meta property="og:site_name" content="Ghrawi Travel">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="غراوي للسياحة والسفر | GHRAWI Travel">
+<meta name="twitter:description" content="رحلات وفنادق وسيارات وخدمات سفر متكاملة">
+<meta name="twitter:image" content="og.jpg">
+
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/ghrawi-travel/">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Analytics: استبدل G-XXXXXXXXXX بمعرفك من Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TravelAgency",
+  "name":"غراوي للسياحة والسفر",
+  "alternateName":"Ghrawi Travel & Tourism",
+  "url":"https://YOUR-USERNAME.github.io/ghrawi-travel/",
+  "image":"https://YOUR-USERNAME.github.io/ghrawi-travel/og.jpg",
+  "telephone":["+963933535323","+963992211043"],
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Damascus",
+    "addressCountry":"SY"
+  },
+  "openingHours":"Mo-Su 09:00-21:00"
+}
+</script>
 
 <style>
+:root{
+  --navy:#0b2442;--ink:#10233f;--deep:#06182d;
+  --red:#ed1c24;--red-btn:#d31820;--gold:#e8c348;
+  --line:#d8dee6;--muted:#5b6b80;--bg:#f7f8fa;
+  --green:#1a9d4b;--radius:14px;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f7f8fa;color:#10233f}
-header{position:absolute;z-index:5;top:0;left:0;right:0;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;background:#fff}
-.logo{height:62px;max-width:190px;object-fit:contain}
-nav{display:flex;gap:25px}
-nav a{color:#10233f;text-decoration:none;font-weight:bold;font-size:14px}
-.menu{display:none;font-size:25px}
-.hero{min-height:560px;padding:135px 7% 125px;color:#fff;display:flex;align-items:center;background:linear-gradient(100deg,#06182de8,#06182d55),url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero>div{max-width:650px}
-.hero small{color:#e8c348;font-weight:bold;letter-spacing:2px}
-.hero h1{font-size:48px;line-height:1.25;margin:15px 0}
-.hero h1 span{color:#ed1c24}
-.hero p{font-size:18px;line-height:1.9}
-.btn{border:0;background:#ed1c24;color:#fff;padding:15px 30px;border-radius:12px;font-weight:bold;font-size:16px;cursor:pointer}
-.booking{max-width:1050px;margin:-65px auto 55px;background:#fff;border-radius:22px;padding:20px;position:relative;box-shadow:0 18px 50px #0002}
-.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
-.tabs button{border:0;background:#eef1f5;color:#10233f;border-radius:12px;padding:15px 5px;font-weight:bold;cursor:pointer}
-.tabs .active{background:#0b2442;color:#fff}
-form{display:grid;gap:13px;padding-top:20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-label{font-size:13px;font-weight:bold;display:block;margin-bottom:5px}
-input,select{width:100%;padding:14px;border:1px solid #d8dee6;border-radius:10px;font-size:15px}
-.submit{border:0;background:#ed1c24;color:#fff;padding:15px;border-radius:11px;font-size:16px;font-weight:bold}
-section{max-width:1050px;margin:55px auto;padding:0 18px}
-h2{text-align:center;font-size:28px}
-.sub{text-align:center;color:#718096;margin-bottom:28px}
-.destinations{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
-.destination{height:230px;border-radius:16px;overflow:hidden;background-size:cover;background-position:center;position:relative}
-.destination:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#07192df0)}
-.destination div{position:absolute;z-index:2;bottom:0;color:white;padding:16px}
-.destination h3{margin:0 0 5px}
-.destination p{margin:0;font-size:13px}
-.services{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.service{background:#fff;border:1px solid #e5e8ed;border-radius:15px;text-align:center;padding:22px 8px}
-.service span{font-size:30px}
-.service b{display:block;margin-top:9px}
-.business{max-width:1050px;margin:60px auto;padding:45px 7%;border-radius:22px;color:white;background:linear-gradient(100deg,#06182d,#123c62);display:grid;grid-template-columns:1fr 1fr;align-items:center}
-.business h2{text-align:right;color:#ed1c24}
-.business p{line-height:2}
-.wa{display:inline-block;background:#25d366;color:#fff;text-decoration:none;padding:13px 25px;border-radius:10px;font-weight:bold}
-.features{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.feature{padding:20px;border-left:1px solid #ddd}
-.feature span{font-size:28px}
-.feature b{display:block;margin-top:8px}
-footer{background:#06182d;color:#fff;text-align:center;padding:35px 15px;margin-top:60px}
-.footer-logo{height:55px;max-width:180px;object-fit:contain;background:#fff;border-radius:8px;padding:3px}
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;padding:20px}
-.modal-box{max-width:500px;background:#fff;border-radius:18px;padding:25px;margin:60px auto}
-.close{float:left;border:0;border-radius:50%;width:32px;height:32px}
-.summary{background:#f3f5f7;border-radius:10px;padding:15px;line-height:2;white-space:pre-line}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:84px}
+body{margin:0;font-family:Cairo,Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+:focus-visible{outline:3px solid #2563eb;outline-offset:2px;border-radius:4px}
+button,input,select,textarea{font-family:inherit;font-size:15px}
+img{max-width:100%;height:auto;display:block}
 
+/* Header */
+header{position:sticky;top:0;z-index:20;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;background:#fffffff2;backdrop-filter:blur(10px);box-shadow:0 2px 14px #0000000f}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo{height:56px;width:auto;max-width:180px;object-fit:contain}
+.brand-text{font-weight:800;font-size:17px;line-height:1.2}
+.brand-text small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px}
+nav{display:flex;gap:25px}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:6px 2px;transition:color .2s}
+nav a:hover{color:var(--red)}
+.menu{display:none;background:none;border:0;font-size:26px;color:var(--ink);cursor:pointer;padding:4px 8px}
+
+/* Hero */
+.hero{min-height:560px;padding:90px 7% 125px;color:#fff;display:flex;align-items:center;background:linear-gradient(100deg,#06182de8,#06182d55),url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=75") center/cover;background-color:var(--deep);position:relative}
+.hero>div{max-width:680px;position:relative;z-index:2}
+.hero small{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:13px}
+.hero h1{font-size:clamp(28px,5vw,48px);line-height:1.3;margin:15px 0}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:clamp(15px,1.8vw,18px);line-height:1.9;margin:0 0 24px;opacity:.95}
+.hero-features{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:14px}
+.hero-features span{display:flex;align-items:center;gap:6px;background:#ffffff14;padding:6px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+.btn{display:inline-block;border:0;background:var(--red-btn);color:#fff;padding:14px 30px;border-radius:12px;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #ed1c2455}
+
+/* Booking */
+.booking{max-width:1050px;margin:-65px auto 55px;background:#fff;border-radius:22px;padding:20px;position:relative;z-index:2;box-shadow:0 18px 50px #0002}
+.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.tabs button{border:0;background:#eef1f5;color:var(--ink);border-radius:12px;padding:13px 5px;font-weight:700;font-size:14px;cursor:pointer;transition:all .2s}
+.tabs button:hover{background:#e2e6eb}
+.tabs .active{background:var(--navy);color:#fff;box-shadow:0 4px 12px #0b244244}
+form.panel{display:grid;gap:14px;padding-top:20px}
+form.panel[hidden]{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+label{font-size:13px;font-weight:700;display:block;margin-bottom:5px}
+label .req{color:var(--red)}
+input,select,textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-size:15px;background:#fff;color:var(--ink);transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:none}
+input:invalid:not(:placeholder-shown){border-color:var(--red)}
+.submit{border:0;background:var(--red-btn);color:#fff;padding:15px;border-radius:11px;font-size:16px;font-weight:700;cursor:pointer;width:100%;transition:background .2s}
+.submit:hover{background:#b8151c}
+.flow{margin:14px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+
+/* Sections */
+.wrap{max-width:1050px;margin:60px auto;padding:0 18px}
+h2{text-align:center;font-size:clamp(22px,3vw,28px);margin:0 0 6px}
+.sub{text-align:center;color:var(--muted);margin:0 0 28px}
+
+/* Destinations */
+.destinations{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+.destination{height:230px;border:0;padding:0;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;background:var(--navy);text-align:right;color:#fff}
+.destination img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.destination:hover img{transform:scale(1.05)}
+.destination:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,#07192df0)}
+.destination div{position:absolute;z-index:2;bottom:0;right:0;left:0;padding:16px}
+.destination h3{margin:0 0 2px;font-size:18px}
+.destination p{margin:0;font-size:13px;opacity:.9}
+
+/* FAQ */
+.faq-item{background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:10px;box-shadow:0 2px 10px #0000000d}
+.faq-item summary{cursor:pointer;font-weight:700;list-style:none;position:relative;padding-left:28px;padding-right:4px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:"+";position:absolute;left:0;top:-2px;color:var(--red);font-size:22px;font-weight:700;transition:transform .2s}
+.faq-item[open] summary::before{content:"−"}
+.faq-item p{margin:12px 0 0;color:var(--muted);line-height:1.8}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.testimonial{background:#fff;padding:24px;border-radius:16px;margin:0;box-shadow:0 4px 16px #0000000d;border-top:3px solid var(--gold)}
+.testimonial p{margin:0 0 12px;line-height:1.8;color:var(--ink)}
+.testimonial footer{font-weight:700;color:var(--navy);font-size:14px}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* Business */
+.business{border-radius:22px;padding:45px 7%;color:#fff;background:linear-gradient(100deg,var(--deep),#123c62);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px}
+.business h2{text-align:right;color:var(--red)}
+.business p{line-height:2}
+.wa{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:13px 25px;border-radius:10px;font-weight:700;transition:transform .2s}
+.wa:hover{transform:translateY(-2px)}
+.biz-art{text-align:center;font-size:70px;line-height:1.3}
+.biz-art span{font-size:26px;color:var(--gold);font-weight:700}
+
+/* Footer */
+footer{background:var(--deep);color:#fff;text-align:center;padding:35px 15px 90px;margin-top:60px}
+footer p{margin:6px 0}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--gold)}
+.footer-logo{height:60px;width:auto;max-width:180px;object-fit:contain;background:#fff;border-radius:14px;padding:6px;margin:auto}
+.copy{color:#aab6c6;font-size:13px}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;z-index:15;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;box-shadow:0 8px 24px #0004;display:flex;align-items:center;gap:8px;transition:transform .2s}
+.wa-float:hover{transform:scale(1.05)}
+
+/* Modal */
+dialog{border:0;border-radius:18px;padding:0;max-width:520px;width:calc(100% - 32px);color:var(--ink);max-height:90vh}
+dialog::backdrop{background:#0009;backdrop-filter:blur(3px)}
+.modal-box{padding:25px;position:relative;max-height:88vh;overflow-y:auto}
+.modal-box h2{text-align:right;font-size:22px;margin-bottom:14px}
+.close{position:absolute;top:14px;left:14px;border:0;border-radius:50%;width:36px;height:36px;background:#eef1f5;font-size:20px;cursor:pointer;transition:background .2s}
+.close:hover{background:#dfe3e8}
+.summary{background:#f3f5f7;border-radius:10px;padding:14px 16px;margin:0 0 14px}
+.summary div{display:flex;gap:8px;padding:3px 0;font-size:14px}
+.summary dt{font-weight:700;min-width:90px;color:var(--navy)}
+.summary dd{margin:0}
+.summary .title{font-weight:800;margin-bottom:8px;color:var(--navy);font-size:16px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.modal-box .field{margin-bottom:12px}
+.modal-box .field label{font-size:13px}
+
+/* Responsive */
+@media(max-width:900px){
+  .destinations{grid-template-columns:repeat(3,1fr)}
+}
 @media(max-width:750px){
-header{padding:10px 18px}
-.logo{height:52px}
-nav{display:none}.menu{display:block}
-.hero{min-height:520px;padding:120px 22px 100px}
-.hero h1{font-size:34px}
-.hero p{font-size:15px}
-.booking{margin:-45px 12px 40px}
-.tabs{grid-template-columns:repeat(3,1fr)}
-.grid,.destinations,.services,.features,.business{grid-template-columns:1fr}
-.destination{height:220px}
-.business{text-align:center;padding:35px 20px}
-.business h2{text-align:center}
-.feature{border:0;border-bottom:1px solid #ddd}
+  header{padding:8px 16px}
+  .logo{height:48px}
+  .brand-text{font-size:15px}
+  nav{display:none;position:absolute;top:100%;right:0;left:0;background:#fff;flex-direction:column;gap:0;padding:6px 18px 14px;box-shadow:0 12px 24px #0002}
+  nav.open{display:flex}
+  nav a{padding:14px 0;border-bottom:1px solid #eef1f5;font-size:15px}
+  .menu{display:block}
+  .hero{min-height:520px;padding:70px 22px 100px}
+  .hero-features{gap:10px;font-size:13px}
+  .booking{margin:-45px 12px 40px;padding:16px}
+  .tabs{grid-template-columns:repeat(3,1fr)}
+  .tabs button{font-size:13px;padding:11px 4px}
+  .destinations{grid-template-columns:repeat(2,1fr)}
+  .destination{height:175px}
+  .destination:last-child{grid-column:1/-1}
+  .business{grid-template-columns:1fr;text-align:center;padding:35px 20px}
+  .business h2{text-align:center}
+  .biz-art{font-size:52px}
+  .biz-art span{font-size:20px}
+  .wrap{margin:45px auto}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .destination img{transition:none}
+  .btn:hover,.wa-float:hover,.wa:hover{transform:none}
 }
 </style>
 </head>
@@ -78,259 +229,210 @@ nav{display:none}.menu{display:block}
 <body>
 
 <header>
-<img src="logo.png" class="logo" alt="GHRAWI Travel & Tourism">
-<nav>
-<a href="#booking">الحجز</a>
-<a href="#destinations">الوجهات</a>
-<a href="#services">الخدمات</a>
-<a href="#business">Business & VIP</a>
-</nav>
-<div class="menu">☰</div>
+  <a class="brand" href="#top" aria-label="الصفحة الرئيسية">
+    <img src="favicon.svg" class="logo" width="56" height="56" alt="Ghrawi Travel">
+    <span class="brand-text">غراوي للسياحة<small>GHRAWI TRAVEL</small></span>
+  </a>
+  <nav id="nav" aria-label="القائمة الرئيسية">
+    <a href="#booking">الحجز</a>
+    <a href="#destinations">الوجهات</a>
+    <a href="#faq">أسئلة شائعة</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+  <button class="menu" id="menu" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav">☰</button>
 </header>
 
-<section class="hero">
-<div>
-<small>GHRAWI TRAVEL & TOURISM</small>
-<h1>سفرك… <span>بتخطيط يليق بك.</span></h1>
-<p>
-رحلات وفنادق وسيارات وخدمات سفر متكاملة
-للأفراد ورجال الأعمال والضيوف VIP.
-</p>
-<button class="btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
-ابدأ رحلتك ✈️
-</button>
+<main id="top">
+
+<div class="hero">
+  <div>
+    <small>GHRAWI TRAVEL &amp; TOURISM</small>
+    <h1>سفرك… <span>بتخطيط يليق بك.</span></h1>
+    <p>رحلات وفنادق وسيارات وخدمات سفر متكاملة للأفراد ورجال الأعمال والضيوف VIP.</p>
+    <a class="btn" href="#booking">ابدأ رحلتك ✈️</a>
+    <div class="hero-features" aria-hidden="true">
+      <span>✈️ طيران عالمي</span>
+      <span>🏨 فنادق فاخرة</span>
+      <span>🛂 تأشيرات</span>
+      <span>💎 VIP</span>
+    </div>
+  </div>
 </div>
-</section>
 
 <div class="booking" id="booking">
 
-<div class="tabs">
-<button class="active" onclick="show('flight',this)">✈️ طيران</button>
-<button onclick="show('hotel',this)">🏨 فنادق</button>
-<button onclick="show('car',this)">🚘 سيارات</button>
-<button onclick="show('visa',this)">🛂 تأشيرات</button>
-<button onclick="show('tour',this)">🌍 رحلات</button>
-<button onclick="show('vip',this)">💎 VIP</button>
-</div>
+  <div class="tabs" role="tablist" aria-label="نوع الخدمة">
+    <button type="button" role="tab" id="t-flight" data-tab="flight" class="active" aria-selected="true" aria-controls="flight">✈️ طيران</button>
+    <button type="button" role="tab" id="t-hotel" data-tab="hotel" aria-selected="false" tabindex="-1" aria-controls="hotel">🏨 فنادق</button>
+    <button type="button" role="tab" id="t-car" data-tab="car" aria-selected="false" tabindex="-1" aria-controls="car">🚘 سيارات</button>
+    <button type="button" role="tab" id="t-visa" data-tab="visa" aria-selected="false" tabindex="-1" aria-controls="visa">🛂 تأشيرات</button>
+    <button type="button" role="tab" id="t-tour" data-tab="tour" aria-selected="false" tabindex="-1" aria-controls="tour">🌍 رحلات</button>
+    <button type="button" role="tab" id="t-vip" data-tab="vip" aria-selected="false" tabindex="-1" aria-controls="vip">💎 VIP</button>
+  </div>
 
-<form id="flight">
-<div class="grid">
-<div><label>من</label><input id="from" placeholder="دمشق"></div>
-<div><label>إلى</label><input id="to" placeholder="الوجهة"></div>
-<div><label>تاريخ المغادرة</label><input id="fd" type="date"></div>
-<div><label>تاريخ العودة</label><input id="rd" type="date"></div>
-<div><label>المسافرون</label><input id="people" type="number" value="1" min="1"></div>
-<div><label>درجة السفر</label>
-<select id="cls">
-<option>اقتصادية</option>
-<option>رجال أعمال</option>
-<option>درجة أولى</option>
-</select></div>
-</div>
-<button class="submit" type="button"
-onclick="prepare('✈️ طلب حجز طيران',from.value+' → '+to.value+' | '+fd.value+' | '+people.value+' مسافر | '+cls.value)">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="flight" role="tabpanel" aria-labelledby="t-flight" data-title="✈️ طلب حجز طيران">
+    <div class="grid">
+      <div><label for="f-from">من <span class="req">*</span></label><input id="f-from" data-label="من" placeholder="دمشق" required></div>
+      <div><label for="f-to">إلى <span class="req">*</span></label><input id="f-to" data-label="إلى" placeholder="الوجهة" required></div>
+      <div><label for="f-fd">تاريخ المغادرة <span class="req">*</span></label><input id="f-fd" data-label="المغادرة" type="date" required></div>
+      <div><label for="f-rd">تاريخ العودة (اختياري)</label><input id="f-rd" data-label="العودة" type="date"></div>
+      <div><label for="f-people">عدد المسافرين <span class="req">*</span></label><input id="f-people" data-label="المسافرون" type="number" value="1" min="1" max="50" required></div>
+      <div><label for="f-cls">درجة السفر</label>
+        <select id="f-cls" data-label="الدرجة">
+          <option>اقتصادية</option><option>رجال أعمال</option><option>درجة أولى</option>
+        </select></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
 
-<form id="hotel" style="display:none">
-<div class="grid">
-<div><label>المدينة</label><input id="city" placeholder="دبي"></div>
-<div><label>الدخول</label><input id="hi" type="date"></div>
-<div><label>الخروج</label><input id="ho" type="date"></div>
-<div><label>الغرف</label><input id="rooms" type="number" value="1" min="1"></div>
-</div>
-<button class="submit" type="button"
-onclick="prepare('🏨 طلب حجز فندق',city.value+' | '+hi.value+' إلى '+ho.value+' | '+rooms.value+' غرفة')">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="hotel" role="tabpanel" aria-labelledby="t-hotel" data-title="🏨 طلب حجز فندق" hidden>
+    <div class="grid">
+      <div><label for="h-city">المدينة <span class="req">*</span></label><input id="h-city" data-label="المدينة" placeholder="دبي" required></div>
+      <div><label for="h-in">تاريخ الدخول <span class="req">*</span></label><input id="h-in" data-label="الدخول" type="date" required></div>
+      <div><label for="h-out">تاريخ الخروج <span class="req">*</span></label><input id="h-out" data-label="الخروج" type="date" required></div>
+      <div><label for="h-rooms">عدد الغرف <span class="req">*</span></label><input id="h-rooms" data-label="الغرف" type="number" value="1" min="1" max="20" required></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
 
-<form id="car" style="display:none">
-<div class="grid">
-<div><label>المدينة</label><input id="cc" placeholder="دبي"></div>
-<div><label>التاريخ</label><input id="cd" type="date"></div>
-<div><label>السيارة</label>
-<select id="ct"><option>اقتصادية</option><option>عائلية</option><option>VIP</option></select>
-</div>
-</div>
-<button class="submit" type="button"
-onclick="prepare('🚘 طلب سيارة',cc.value+' | '+cd.value+' | '+ct.value)">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="car" role="tabpanel" aria-labelledby="t-car" data-title="🚘 طلب سيارة" hidden>
+    <div class="grid">
+      <div><label for="c-city">المدينة <span class="req">*</span></label><input id="c-city" data-label="المدينة" placeholder="دبي" required></div>
+      <div><label for="c-date">التاريخ <span class="req">*</span></label><input id="c-date" data-label="التاريخ" type="date" required></div>
+      <div><label for="c-type">نوع السيارة</label>
+        <select id="c-type" data-label="السيارة"><option>اقتصادية</option><option>عائلية</option><option>VIP</option></select></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
 
-<form id="visa" style="display:none">
-<label>الدولة المطلوبة</label>
-<input id="vc" placeholder="الدولة">
-<label>الخدمة</label>
-<select id="vt">
-<option>استشارة تأشيرة</option>
-<option>تقديم طلب</option>
-<option>تأمين سفر</option>
-</select>
-<button class="submit" type="button"
-onclick="prepare('🛂 طلب تأشيرة / تأمين',vc.value+' | '+vt.value)">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="visa" role="tabpanel" aria-labelledby="t-visa" data-title="🛂 طلب تأشيرة / تأمين" hidden>
+    <div class="grid">
+      <div><label for="v-country">الدولة المطلوبة <span class="req">*</span></label><input id="v-country" data-label="الدولة" placeholder="الدولة" required></div>
+      <div><label for="v-type">الخدمة</label>
+        <select id="v-type" data-label="الخدمة"><option>استشارة تأشيرة</option><option>تقديم طلب</option><option>تأمين سفر</option></select></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
 
-<form id="tour" style="display:none">
-<label>الوجهة</label>
-<input id="tc" placeholder="تركيا، دبي، أوروبا...">
-<div class="grid">
-<div><label>عدد الأشخاص</label><input id="tp" type="number" value="1"></div>
-<div><label>نوع الرحلة</label>
-<select id="tt"><option>عائلية</option><option>فردية</option><option>VIP</option><option>Business</option></select>
-</div>
-</div>
-<button class="submit" type="button"
-onclick="prepare('🌍 طلب رحلة سياحية',tc.value+' | '+tp.value+' أشخاص | '+tt.value)">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="tour" role="tabpanel" aria-labelledby="t-tour" data-title="🌍 طلب رحلة سياحية" hidden>
+    <div class="grid">
+      <div><label for="tc">الوجهة <span class="req">*</span></label><input id="tc" data-label="الوجهة" placeholder="تركيا، دبي، أوروبا..." required></div>
+      <div><label for="tp">عدد الأشخاص <span class="req">*</span></label><input id="tp" data-label="الأشخاص" type="number" value="1" min="1" max="100" required></div>
+      <div><label for="tt">نوع الرحلة</label>
+        <select id="tt" data-label="النوع"><option>عائلية</option><option>فردية</option><option>VIP</option><option>Business</option></select></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
 
-<form id="vip" style="display:none">
-<label>الخدمة</label>
-<select id="vs">
-<option>استقبال VIP</option>
-<option>سيارة مع سائق</option>
-<option>رحلة أعمال</option>
-<option>المعارض والمؤتمرات</option>
-<option>تنسيق وفد</option>
-</select>
-<label>الوجهة</label>
-<input id="vd" placeholder="المدينة / الدولة">
-<button class="submit" type="button"
-onclick="prepare('💎 Business & VIP',vs.value+' | '+vd.value)">
-متابعة الطلب
-</button>
-</form>
+  <form class="panel" id="vip" role="tabpanel" aria-labelledby="t-vip" data-title="💎 طلب Business &amp; VIP" hidden>
+    <div class="grid">
+      <div><label for="vs">الخدمة</label>
+        <select id="vs" data-label="الخدمة">
+          <option>استقبال VIP</option><option>سيارة مع سائق</option><option>رحلة أعمال</option><option>المعارض والمؤتمرات</option><option>تنسيق وفد</option>
+        </select></div>
+      <div><label for="vd">الوجهة <span class="req">*</span></label><input id="vd" data-label="الوجهة" placeholder="المدينة / الدولة" required></div>
+    </div>
+    <button class="submit" type="submit">متابعة الطلب</button>
+  </form>
+
+  <p class="flow">عبّئ الطلب، راجعه، وأرسله عبر واتساب. نرد عليك بالخيارات والأسعار.</p>
 
 </div>
 
-<section id="destinations">
-<h2>وجهات مختارة</h2>
-<p class="sub">اكتشف خيارات سفر إلى وجهات حول العالم</p>
+<section class="wrap" id="destinations">
+  <h2>وجهات مختارة</h2>
+  <p class="sub">اضغط على الوجهة لتبدأ طلب رحلتك إليها</p>
 
-<div class="destinations">
-
-<div class="destination" style="background-image:url('https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=700&q=80')">
-<div><h3>إسطنبول</h3><p>تركيا</p></div>
-</div>
-
-<div class="destination" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=700&q=80')">
-<div><h3>دبي</h3><p>الإمارات</p></div>
-</div>
-
-<div class="destination" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80')">
-<div><h3>باريس</h3><p>فرنسا</p></div>
-</div>
-
-<div class="destination" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80')">
-<div><h3>المالديف</h3><p>جزر المالديف</p></div>
-</div>
-
-<div class="destination" style="background-image:url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=700&q=80')">
-<div><h3>أوروبا</h3><p>وجهات أوروبية</p></div>
-</div>
-
-</div>
+  <div class="destinations">
+    <button type="button" class="destination" data-dest="إسطنبول">
+      <img loading="lazy" width="600" height="400" alt="إسطنبول - تركيا" src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=600&q=70">
+      <div><h3>إسطنبول</h3><p>تركيا</p></div>
+    </button>
+    <button type="button" class="destination" data-dest="دبي">
+      <img loading="lazy" width="600" height="400" alt="دبي - الإمارات" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=70">
+      <div><h3>دبي</h3><p>الإمارات</p></div>
+    </button>
+    <button type="button" class="destination" data-dest="باريس">
+      <img loading="lazy" width="600" height="400" alt="باريس - فرنسا" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=70">
+      <div><h3>باريس</h3><p>فرنسا</p></div>
+    </button>
+    <button type="button" class="destination" data-dest="المالديف">
+      <img loading="lazy" width="600" height="400" alt="المالديف" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=70">
+      <div><h3>المالديف</h3><p>جزر المالديف</p></div>
+    </button>
+    <button type="button" class="destination" data-dest="أوروبا">
+      <img loading="lazy" width="600" height="400" alt="وجهات أوروبية" src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=600&q=70">
+      <div><h3>أوروبا</h3><p>وجهات أوروبية</p></div>
+    </button>
+  </div>
 </section>
 
-<section id="services">
-<h2>خدمات غراوي</h2>
-<p class="sub">كل ما تحتاجه لرحلة منظمة في مكان واحد</p>
-
-<div class="services">
-<div class="service"><span>✈️</span><b>الطيران</b></div>
-<div class="service"><span>🏨</span><b>الفنادق</b></div>
-<div class="service"><span>🚘</span><b>السيارات</b></div>
-<div class="service"><span>🛂</span><b>التأشيرات</b></div>
-<div class="service"><span>🌍</span><b>الرحلات</b></div>
-<div class="service"><span>💎</span><b>Business & VIP</b></div>
-</div>
+<section class="wrap" id="business">
+  <div class="business">
+    <div>
+      <h2>Ghrawi Business &amp; VIP</h2>
+      <p>حلول سفر مخصصة لرجال الأعمال والمعارض والوفود، من الرحلات والفنادق إلى الاستقبال والنقل والتنسيق.</p>
+      <a class="wa" href="https://wa.me/963933535323" target="_blank" rel="noopener">تواصل معنا عبر واتساب</a>
+    </div>
+    <div class="biz-art" aria-hidden="true">✈️<br><span>BUSINESS • VIP</span></div>
+  </div>
 </section>
 
-<section id="business">
-<div class="business">
-<div>
-<h2>Ghrawi Business & VIP</h2>
-<p>
-حلول سفر مخصصة لرجال الأعمال والمعارض والوفود،
-من الرحلات والفنادق إلى الاستقبال والنقل والتنسيق.
-</p>
-<a class="wa" href="https://wa.me/963933535323" target="_blank" rel="noopener">
-تواصل معنا عبر واتساب
-</a>
-</div>
+<section class="wrap" id="testimonials">
+  <h2>ماذا يقول عملاؤنا</h2>
+  <p class="sub">ثقة عملائنا هي رأس مالنا</p>
 
-<div style="text-align:center;font-size:70px">
-✈️<br>
-<span style="font-size:30px;color:#d4af37">BUSINESS • VIP</span>
-</div>
-</div>
+  <div class="testimonials">
+    <blockquote class="testimonial">
+      <p>"خدمة راقية وسريعة، رتبوا لي رحلة عمل إلى دبي في أقل من يوم."</p>
+      <footer>— أحمد م. <span class="stars">★★★★★</span></footer>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"أفضل وكالة تعاملت معها، أسعار منافسة ومتابعة شخصية."</p>
+      <footer>— سارة ل. <span class="stars">★★★★★</span></footer>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"رحلتنا العائلية إلى تركيا كانت مثالية، كل التفاصيل مرتبة."</p>
+      <footer>— عائلة الحلبي <span class="stars">★★★★★</span></footer>
+    </blockquote>
+  </div>
 </section>
 
-<section>
-<div class="features">
-<div class="feature">⏱️<b>نوفر وقتك</b></div>
-<div class="feature">🎯<b>نختار المناسب</b></div>
-<div class="feature">🤝<b>متابعة شخصية</b></div>
-<div class="feature">💎<b>خدمات مميزة</b></div>
-</div>
+<section class="wrap" id="faq">
+  <h2>الأسئلة الشائعة</h2>
+  <p class="sub">إجابات سريعة لأكثر ما يُسأل عنه</p>
+
+  <details class="faq-item">
+    <summary>كم يستغرق إصدار التأشيرة؟</summary>
+    <p>حسب الدولة، من 3 أيام إلى 3 أسابيع. تواصل معنا لمعرفة التفاصيل الدقيقة حسب وجهتك.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>هل تقدمون خدمة الاستقبال من المطار؟</summary>
+    <p>نعم، لدينا خدمة استقبال VIP مع سائق خاص في معظم المدن العربية والأوروبية.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>ما هي طرق الدفع المتاحة؟</summary>
+    <p>تحويل بنكي، حوالات، ونقدًا في المكتب. نتفق على التفاصيل عبر واتساب.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>هل يمكن تعديل الحجز بعد تأكيده؟</summary>
+    <p>نعم، حسب سياسة الشركة الناقلة أو الفندق. تواصل معنا فورًا للتعديل.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>هل تعملون على مدار الأسبوع؟</summary>
+    <p>نعم، من السبت إلى الخميس 9 صباحًا - 9 مساءً، والجمعة حسب الحاجة للطلبات العاجلة.</p>
+  </details>
 </section>
 
-<footer>
-<img src="logo.png" class="footer-logo" alt="GHRAWI">
-<p>غراوي للسياحة والسفر</p>
-<p>Damascus · Syria</p>
-<p>0933535323 · 0992211043</p>
-<p>© 2026 Ghrawi Travel & Tourism</p>
-</footer>
+</main>
 
-<div class="modal" id="modal">
-<div class="modal-box">
-<button class="close" onclick="closeModal()">×</button>
-<h2>مراجعة طلبك</h2>
-<div class="summary" id="summary"></div>
-<br>
-<button class="submit" style="width:100%" onclick="sendWhatsApp()">
-إرسال الطلب إلى غراوي عبر واتساب
-</button>
-</div>
-</div>
-
-<script>
-let request="";
-
-function show(id,button){
-document.querySelectorAll("form").forEach(x=>x.style.display="none");
-document.getElementById(id).style.display="grid";
-document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));
-button.classList.add("active");
-}
-
-function prepare(title,data){
-request=title+"\n"+data;
-document.getElementById("summary").innerText=
-title+"\n\n"+data+"\n\nهل تريد إرسال الطلب إلى غراوي؟";
-document.getElementById("modal").style.display="block";
-}
-
-function closeModal(){
-document.getElementById("modal").style.display="none";
-}
-
-function sendWhatsApp(){
-window.open(
-"https://wa.me/963933535323?text="+
-encodeURIComponent("مرحباً غراوي للسياحة والسفر،\n\n"+request),
-"_blank"
-);
-closeModal();
-}
-</script>
-
-</body>
-</html>
+<footer id="contact">
+  <img class="footer-logo" src="favicon.svg" width="56" height="56" alt="GHRAWI">
+  <p><b>غراوي للسياحة والسفر</b></p>
+  <p>Damascus · Syria</p>
+  <p>
+    <a href="tel:+963933535323" dir="ltr">0933 535
