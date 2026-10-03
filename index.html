@@ -4,37 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>غراوي للسياحة والسفر - نظام الحجز الذكي</title>
-    <!-- استيراد الخط لضمان سرعة التحميل القصوى وعرض التصميم الفخم -->
+    <!-- استيراد الخط لضمان سرعة التحميل القصوى في دمشق -->
     <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
-        :root {
-            --navy-blue: #0F203D; /* أزرق نيفي ملكي داكن */
-            --navy-light: #1A365D;
-            --gold: #C5A880; /* ذهبي فاخر من روح الشعار */
-            --gold-light: #F4EFE6;
-            --crimson-red: #D32F2F; /* الأحمر الديناميكي من الشعار */
-            --white: #FFFFFF;
-            --gray-light: #F8FAFC;
-            --text-main: #1E293B;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Cairo', sans-serif;
-            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            /* إضافة صورة طائرة فخمة تحلق فوق السحاب وقت الغروب كخلفية تفاعلية كاملة للموقع */
-            background: linear-gradient(rgba(11, 19, 43, 0.75), rgba(11, 19, 43, 0.75)), 
-                        url('https://unsplash.com') no-gradient;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--text-main);
+            /* تصميم الخلفية الملكية المدمجة بألوان الهوية */
+            background: linear-gradient(135deg, #0F203D 0%, #050B14 100%);
+            color: #1E293B;
             padding: 20px 10px;
             min-height: 100vh;
             display: flex;
@@ -44,84 +28,38 @@
 
         .booking-container {
             width: 100%;
-            max-width: 500px;
-            background: rgba(255, 255, 255, 0.96); /* خلفية بيضاء مريحة وشفافة بنسبة بسيطة لإبراز الطائرة خلفها */
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            max-width: 480px;
+            background: #FFFFFF; 
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-            border: 2px solid var(--gold);
-            backdrop-filter: blur(10px);
+            border: 2px solid #C5A880; /* إطار ذهبي فاخر */
         }
 
-        /* الهيدر الفخم المعتمد لغراوي ترافل */
+        /* الهيدر المعتمد لغراوي ترافل */
         .header {
-            background: linear-gradient(135deg, rgba(15, 32, 61, 0.95) 0%, rgba(5, 11, 20, 0.95) 100%);
-            padding: 25px 20px;
+            background: linear-gradient(135deg, #0F203D 0%, #0A1424 100%);
+            padding: 22px;
             text-align: center;
-            border-bottom: 4px solid var(--gold);
-        }
-
-        /* تنسيق الشعار ليظهر بشكل دائري نقي ومحمي في منتصف الهيدر */
-        .logo-placeholder {
-            width: 110px;
-            height: 110px;
-            margin-bottom: 12px;
-            border-radius: 50%;
-            background-color: var(--white);
-            padding: 4px;
-            border: 2px solid var(--gold);
-            box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
-            object-fit: contain;
+            border-bottom: 4px solid #C5A880;
         }
 
         .header h1 {
-            color: var(--white);
+            color: #FFFFFF;
             font-size: 22px;
             font-weight: 800;
-            letter-spacing: 0.5px;
         }
 
         .header p {
-            color: var(--gold);
+            color: #C5A880;
             font-size: 13px;
             margin-top: 4px;
             font-weight: 600;
         }
 
-        /* شريط التقدّم التفاعلي */
-        .progress-container {
-            background: var(--gray-light);
-            padding: 12px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #E2E8F0;
-        }
-
-        .progress-text {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--navy-light);
-        }
-
-        .progress-bar-bg {
-            width: 55%;
-            height: 6px;
-            background: #E2E8F0;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .progress-bar-fill {
-            width: 25%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--gold) 0%, var(--crimson-red) 100%);
-            transition: width 0.4s ease;
-        }
-
-        /* فورم الحجز السريع */
+        /* فورم الحجز السريع الخفيف والمحمي من الاختفاء */
         .booking-form {
-            padding: 22px;
+            padding: 20px;
         }
 
         .form-row {
@@ -134,53 +72,47 @@
         }
 
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .form-group label {
             display: block;
             font-weight: 700;
-            margin-bottom: 6px;
-            font-size: 13px;
-            color: var(--navy-blue);
-        }
-
-        .form-group label span {
-            color: var(--crimson-red);
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #0F203D;
         }
 
         .form-control {
             width: 100%;
-            padding: 11px 12px;
+            padding: 10px 12px;
             border: 1.5px solid #CBD5E1;
-            border-radius: 10px;
+            border-radius: 8px;
             font-size: 14px;
             font-weight: 600;
-            color: var(--navy-blue);
-            background-color: var(--white);
-            transition: all 0.3s ease;
+            color: #0F203D;
+            background-color: #FFFFFF;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+            border-color: #C5A880;
         }
 
-        /* الحقول التسويقية الإضافية لزيادة أرباح المكتب */
+        /* الخدمات الإضافية لزيادة المبيعات والأرباح */
         .extra-services {
-            background: var(--gray-light);
-            padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 16px;
+            background: #F8FAFC;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 14px;
             border: 1px solid #E2E8F0;
         }
 
         .extra-services-title {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
-            color: var(--navy-light);
-            margin-bottom: 8px;
+            color: #1A365D;
+            margin-bottom: 6px;
         }
 
         .checkbox-group {
@@ -190,89 +122,59 @@
         }
 
         .checkbox-btn {
-            background: var(--white);
+            background: #FFFFFF;
             border: 1px solid #CBD5E1;
-            padding: 6px 10px;
-            border-radius: 8px;
-            font-size: 12px;
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 11px;
             font-weight: 700;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
 
-        .checkbox-btn input {
-            accent-color: var(--crimson-red);
-        }
-
-        /* صندوق كسر ومنافسة أسعار بوكينج */
+        /* صندوق ضرب ومنافسة أسعار بوكينج */
         .upsell-box {
-            background: var(--gold-light);
-            border: 1.5px dashed var(--gold);
+            background: #F4EFE6;
+            border: 1.5px dashed #C5A880;
             padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 18px;
+            border-radius: 10px;
+            margin-bottom: 16px;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            cursor: pointer;
+            gap: 8px;
         }
 
         .upsell-box input[type="checkbox"] {
-            margin-top: 4px;
-            accent-color: var(--crimson-red);
-            width: 16px;
-            height: 16px;
+            margin-top: 3px;
+            accent-color: #D32F2F;
         }
 
         .upsell-box label {
             font-size: 12px;
             font-weight: 700;
-            color: var(--navy-blue);
-            line-height: 1.5;
+            color: #0F203D;
+            line-height: 1.4;
             cursor: pointer;
         }
 
         .upsell-box label strong {
-            color: var(--crimson-red);
+            color: #D32F2F;
         }
 
-        /* زر الإرسال الرئيسي لواتساب */
+        /* زر الإرسال الرئيسي باللون الأحمر الملكي من الشعار */
         .submit-btn {
             width: 100%;
-            background: linear-gradient(90deg, var(--crimson-red) 0%, #B71C1C 100%);
-            color: var(--white);
+            background: linear-gradient(90deg, #D32F2F 0%, #B71C1C 100%);
+            color: #FFFFFF;
             border: none;
             padding: 14px;
             border-radius: 10px;
             font-size: 16px;
             font-weight: 800;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(211, 47, 47, 0.4);
-        }
-
-        /* خيار المساعدة المباشر السريع */
-        .quick-help {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .quick-help a {
-            color: var(--navy-light);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--navy-light);
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
         }
 
         .footer-text {
@@ -280,58 +182,121 @@
             padding: 12px;
             font-size: 11px;
             color: #64748B;
-            background: var(--gray-light);
+            background: #F8FAFC;
             border-top: 1px solid #E2E8F0;
             font-weight: 600;
-        }
-
-        /* شاشة التأكيد والتحويل الفوري لواتساب */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(11, 19, 43, 0.85);
-            z-index: 1000;
-            align-items: center; justify-content: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 380px;
-            border: 2px solid var(--gold);
-        }
-
-        .modal-content h3 {
-            font-size: 17px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: var(--navy-blue);
         }
     </style>
 </head>
 <body>
 
 <div class="booking-container">
-    <!-- هيدر الهوية الفاخرة لـ غراوي ترافل مضافاً إليه خانة الشعار الدائرية المحمية -->
+    <!-- هيدر الهوية الفاخرة لـ غراوي ترافل -->
     <div class="header">
-        <!-- المبرمج يحفظ ملف الشعار باسم logo.png ويضعه في نفس المجلد لتظهر تلقائياً مكان الصورة البديلة -->
-        <img src="logo.png" alt="غراوي ترافل" class="logo-placeholder" onerror="this.src='https://ibb.co'">
         <h1>غراوي للسياحة والسفر</h1>
         <p>سفرك... بتخطيط يليق بك</p>
     </div>
 
-    <div class="progress-container">
-        <span class="progress-text" id="progressText">يرجى ملء تفاصيل رحلتك</span>
-        <div class="progress-bar-bg">
-            <div class="progress-bar-fill" id="progressBar"></div>
-        </div>
-    </div>
-
-    <!-- نموذج الحجز السريع المحدث كلياً والمحمي من التجميد -->
-    <form class="booking-form" id="bookingForm" onsubmit="handleFormSubmit(event)">
+    <!-- نموذج الحجز الصافي البسيط الآمن من الاختفاء تماماً -->
+    <form class="booking-form" onsubmit="handleFormSubmit(event)">
         <div class="form-row">
             <div class="form-group">
+                <label>من (المغادرة) *</label>
+                <input type="text" id="departure" class="form-control" value="دمشق" required>
+            </div>
+            <div class="form-group">
+                <label>إلى (الوجهة) *</label>
+                <input type="text" id="destination" class="form-control" required placeholder="دبي، القاهرة..">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>تاريخ المغادرة *</label>
+                <input type="date" id="departDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>تاريخ العودة (اختياري)</label>
+                <input type="date" id="returnDate" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>الركاب *</label>
+                <input type="number" id="passengers" class="form-control" value="1" min="1" required>
+            </div>
+            <div class="form-group">
+                <label>درجة السفر</label>
+                <select id="classType" class="form-control">
+                    <option value="اقتصادية (Economy)">اقتصادية</option>
+                    <option value="رجال أعمال (Business)">رجال أعمال</option>
+                    <option value="درجة أولى (First Class)">درجة أولى</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="extra-services">
+            <div class="extra-services-title">خدمات إضافية مطلوبة:</div>
+            <div class="checkbox-group">
+                <label class="checkbox-btn"><input type="checkbox" id="srvVisa" value="تأشيرة فيزا"> تأشيرة دخول</label>
+                <label class="checkbox-btn"><input type="checkbox" id="srvCar" value="سيارة خاصة"> استقبال مطار</label>
+                <label class="checkbox-btn"><input type="checkbox" id="srvIns" value="تأمين سفر"> تأمين صحي</label>
+            </div>
+        </div>
+
+        <div class="upsell-box">
+            <input type="checkbox" id="hotelDiscount" checked>
+            <label for="hotelDiscount">
+                تفعيل **خصم غراوي الخاص للفنادق** 🏨 (ضمان أسعار منافسة لـ Booking.com وتوفير يصل إلى 15% لهذه الوجهة).
+            </label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            🟢 إرسال الطلب ومتابعة الحجز الفوري
+        </button>
+    </form>
+
+    <div class="footer-text">
+        غراوي ترافل &copy; 2026 - سفرك... بتخطيط يليق بك
+    </div>
+</div>
+
+<script>
+    // الأرقام الرسمية المعتمدة لمكتب غراوي ترافل
+    const phonesList = ["963933535323", "963992211043"];
+
+    window.onload = function() {
+        const todayStr = new Date().toISOString().split('T')[0];
+        document.getElementById('departDate').setAttribute('min', todayStr);
+        document.getElementById('returnDate').setAttribute('min', todayStr);
+    };
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const selectedPhone = phonesList[Math.floor(Math.random() * phonesList.length)];
+
+        const departure = document.getElementById('departure').value;
+        const destination = document.getElementById('destination').value;
+        const departDate = document.getElementById('departDate').value;
+        const returnDate = document.getElementById('returnDate').value || "ذهاب فقط";
+        const passengers = document.getElementById('passengers').value;
+        const classType = document.getElementById('classType').value;
+        
+        let extras = [];
+        if(document.getElementById('srvVisa').checked) extras.push("تأشيرة دخول 🎫");
+        if(document.getElementById('srvCar').checked) extras.push("استقبال سيارة خاصة 🚗");
+        if(document.getElementById('srvIns').checked) extras.push("تأمين صحي للسفر 🛡️");
+        const extrasText = extras.length > 0 ? extras.join(' + ') : "لا يوجد خدمات إضافية";
+
+        const hotelDiscount = document.getElementById('hotelDiscount').checked ? "نعم، أرسل لي عروض الفنادق الحصرية للمكاتب 🏨🔥" : "لا، طيران فقط";
+
+        const message = `✨ *طلب حجز مبدئي جديد - غراوي ترافل* ✨%0A` +
+                        `-----------------------------------%0A` +
+                        `🛫 *محطة الانطلاق:* ${departure}%0A` +
+                        `🛬 *وجهة الوصول:* ${destination}%0A` +
+                        `📅 *تاريخ الذهاب:* ${departDate}%0A` +
+                        `📅 *تاريخ العودة:* ${returnDate}%0A` +
+                        `👥 *عدد المسافرين:* ${passengers} راكب%0A` +
+                        `💺 *درجة السفر:* ${classType}%0A` +
