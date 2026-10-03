@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>غراوي للسياحة والسفر - نظام الحجز الذكي</title>
-    <!-- استيراد الخطوط والأيقونات والمكتبات الفاخرة -->
+    <!-- استيراد الخط لضمان سرعة التحميل القصوى وعرض التصميم الفخم -->
     <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
     
     <style>
         :root {
             --navy-blue: #0F203D; /* أزرق نيفي ملكي داكن */
             --navy-light: #1A365D;
-            --gold: #C5A880; /* ذهبي فاخر */
+            --gold: #C5A880; /* ذهبي فاخر من روح الشعار */
             --gold-light: #F4EFE6;
             --crimson-red: #D32F2F; /* الأحمر الديناميكي من الشعار */
             --white: #FFFFFF;
@@ -29,10 +28,14 @@
         }
 
         body {
-            background-color: #0B132B;
-            background-image: radial-gradient(at 0% 0%, hsla(223,83%,18%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(218,63%,12%,1) 0, transparent 50%);
+            /* إضافة صورة طائرة فخمة تحلق فوق السحاب وقت الغروب كخلفية تفاعلية كاملة للموقع */
+            background: linear-gradient(rgba(11, 19, 43, 0.75), rgba(11, 19, 43, 0.75)), 
+                        url('https://unsplash.com') no-gradient;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: var(--text-main);
-            padding: 30px 10px;
+            padding: 20px 10px;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -41,46 +44,47 @@
 
         .booking-container {
             width: 100%;
-            max-width: 520px;
-            background: var(--white);
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.96); /* خلفية بيضاء مريحة وشفافة بنسبة بسيطة لإبراز الطائرة خلفها */
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             border: 2px solid var(--gold);
+            backdrop-filter: blur(10px);
         }
 
-        /* الهيدر الفخم */
+        /* الهيدر الفخم المعتمد لغراوي ترافل */
         .header {
-            background: linear-gradient(135deg, var(--navy-blue) 0%, #050B14 100%);
-            padding: 30px 20px;
+            background: linear-gradient(135deg, rgba(15, 32, 61, 0.95) 0%, rgba(5, 11, 20, 0.95) 100%);
+            padding: 25px 20px;
             text-align: center;
             border-bottom: 4px solid var(--gold);
-            position: relative;
         }
 
+        /* تنسيق الشعار ليظهر بشكل دائري نقي ومحمي في منتصف الهيدر */
         .logo-placeholder {
-            width: 140px;
-            height: auto;
-            margin-bottom: 10px;
-            filter: drop-shadow(0px 6px 8px rgba(0,0,0,0.3));
-            transition: transform 0.3s ease;
-        }
-
-        .logo-placeholder:hover {
-            transform: scale(1.05);
+            width: 110px;
+            height: 110px;
+            margin-bottom: 12px;
+            border-radius: 50%;
+            background-color: var(--white);
+            padding: 4px;
+            border: 2px solid var(--gold);
+            box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+            object-fit: contain;
         }
 
         .header h1 {
             color: var(--white);
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
             letter-spacing: 0.5px;
         }
 
         .header p {
             color: var(--gold);
-            font-size: 14px;
-            margin-top: 6px;
+            font-size: 13px;
+            margin-top: 4px;
             font-weight: 600;
         }
 
@@ -101,7 +105,7 @@
         }
 
         .progress-bar-bg {
-            width: 60%;
+            width: 55%;
             height: 6px;
             background: #E2E8F0;
             border-radius: 10px;
@@ -109,20 +113,20 @@
         }
 
         .progress-bar-fill {
-            width: 15%;
+            width: 25%;
             height: 100%;
             background: linear-gradient(90deg, var(--gold) 0%, var(--crimson-red) 100%);
             transition: width 0.4s ease;
         }
 
-        /* فورم الحجز */
+        /* فورم الحجز السريع */
         .booking-form {
-            padding: 25px;
+            padding: 22px;
         }
 
         .form-row {
             display: flex;
-            gap: 15px;
+            gap: 12px;
         }
 
         .form-row .form-group {
@@ -130,13 +134,13 @@
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-size: 13px;
             color: var(--navy-blue);
         }
@@ -145,26 +149,12 @@
             color: var(--crimson-red);
         }
 
-        .input-icon-wrapper {
-            position: relative;
-        }
-
-        .input-icon-wrapper i {
-            position: absolute;
-            right: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gold);
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
         .form-control {
             width: 100%;
-            padding: 13px 42px 13px 15px;
+            padding: 11px 12px;
             border: 1.5px solid #CBD5E1;
-            border-radius: 12px;
-            font-size: 15px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 600;
             color: var(--navy-blue);
             background-color: var(--white);
@@ -173,20 +163,16 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var(--navy-blue);
-            box-shadow: 0 0 0 3px rgba(15, 32, 61, 0.1);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
         }
 
-        .form-control:focus + i {
-            color: var(--crimson-red);
-        }
-
-        /* الحقول التسويقية الإضافية لزيادة المبيعات */
+        /* الحقول التسويقية الإضافية لزيادة أرباح المكتب */
         .extra-services {
             background: var(--gray-light);
-            padding: 15px;
-            border-radius: 14px;
-            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 16px;
             border: 1px solid #E2E8F0;
         }
 
@@ -194,19 +180,19 @@
             font-size: 12px;
             font-weight: 800;
             color: var(--navy-light);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .checkbox-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .checkbox-btn {
             background: var(--white);
             border: 1px solid #CBD5E1;
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
             font-size: 12px;
             font-weight: 700;
@@ -214,45 +200,37 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
         }
 
         .checkbox-btn input {
             accent-color: var(--crimson-red);
         }
 
-        /* صندوق ضرب أسعار بوكينج للمنافسة الشرسة */
+        /* صندوق كسر ومنافسة أسعار بوكينج */
         .upsell-box {
             background: var(--gold-light);
             border: 1.5px dashed var(--gold);
-            padding: 15px;
-            border-radius: 14px;
-            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 18px;
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 10px;
             cursor: pointer;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.4); }
-            70% { box-shadow: 0 0 0 8px rgba(197, 168, 128, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(197, 168, 128, 0); }
         }
 
         .upsell-box input[type="checkbox"] {
             margin-top: 4px;
             accent-color: var(--crimson-red);
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
         .upsell-box label {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             color: var(--navy-blue);
-            line-height: 1.6;
+            line-height: 1.5;
             cursor: pointer;
         }
 
@@ -260,35 +238,34 @@
             color: var(--crimson-red);
         }
 
-        /* زر الإرسال الرئيسي المتفجر والجاذب */
+        /* زر الإرسال الرئيسي لواتساب */
         .submit-btn {
             width: 100%;
             background: linear-gradient(90deg, var(--crimson-red) 0%, #B71C1C 100%);
             color: var(--white);
             border: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 17px;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 800;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+            transition: all 0.2s ease;
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.5);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(211, 47, 47, 0.4);
         }
 
-        /* خيار المساعدة السريع المدمج لمنع تشتيت الزبون */
+        /* خيار المساعدة المباشر السريع */
         .quick-help {
             text-align: center;
             margin-top: 15px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
         }
 
@@ -300,7 +277,7 @@
 
         .footer-text {
             text-align: center;
-            padding: 15px;
+            padding: 12px;
             font-size: 11px;
             color: #64748B;
             background: var(--gray-light);
@@ -308,12 +285,12 @@
             font-weight: 600;
         }
 
-        /* شاشة التأكيد المنبثقة قبل التحويل الفوري للواتساب للفخامة */
+        /* شاشة التأكيد والتحويل الفوري لواتساب */
         .modal {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(11, 19, 43, 0.8);
+            background: rgba(11, 19, 43, 0.85);
             z-index: 1000;
             align-items: center; justify-content: center;
             padding: 20px;
@@ -321,23 +298,17 @@
 
         .modal-content {
             background: var(--white);
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
             text-align: center;
-            max-width: 400px;
+            max-width: 380px;
             border: 2px solid var(--gold);
         }
 
-        .modal-content i {
-            font-size: 50px;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
         .modal-content h3 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--navy-blue);
         }
     </style>
@@ -345,11 +316,22 @@
 <body>
 
 <div class="booking-container">
-    <!-- هيدر الهوية الفاخرة لـ غراوي ترافل -->
+    <!-- هيدر الهوية الفاخرة لـ غراوي ترافل مضافاً إليه خانة الشعار الدائرية المحمية -->
     <div class="header">
-        <img src="logo.png" alt="غراوي ترافل" class="logo-placeholder" onerror="this.src='https://squarespace-cdn.com'">
+        <!-- المبرمج يحفظ ملف الشعار باسم logo.png ويضعه في نفس المجلد لتظهر تلقائياً مكان الصورة البديلة -->
+        <img src="logo.png" alt="غراوي ترافل" class="logo-placeholder" onerror="this.src='https://ibb.co'">
         <h1>غراوي للسياحة والسفر</h1>
         <p>سفرك... بتخطيط يليق بك</p>
     </div>
 
     <div class="progress-container">
+        <span class="progress-text" id="progressText">يرجى ملء تفاصيل رحلتك</span>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- نموذج الحجز السريع المحدث كلياً والمحمي من التجميد -->
+    <form class="booking-form" id="bookingForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+            <div class="form-group">
